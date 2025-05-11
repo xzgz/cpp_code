@@ -1,0 +1,31 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Float Converter</title>
+    <!-- 保持原有样式不变 -->
+</head>
+
+<body>
+    <div class="container">
+        <form method="POST">
+            <!-- 其他部分保持不变 -->
+
+            {% if state.show_bits %}
+            <div id="bitButtons">
+                {# 使用Jinja2的循环变量替代enumerate #}
+                {% for index in range(state.bits|length) %}
+                <button type="submit" name="toggle_bit" value="{{ index }}" class="bit-btn">
+                    {{ state.bits[index] }}
+                </button>
+                {% endfor %}
+            </div>
+
+            <!-- 输出部分保持不变 -->
+            {% endif %}
+        </form>
+    </div>
+</body>
+
+</html>

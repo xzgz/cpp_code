@@ -1,0 +1,220 @@
+from flask import Flask, render_template_string, request, jsonify
+import custom_converter
+
+app = Flask(__name__)
+
+state = {
+    "w": 8,
+    "t": 23,
+    "bits": [0] * 32,
+    "binary_str": "",
+    "hex_value": "0x3F800000",
+    "fp_value": "",
+    "diff_with_nearest": ""
+}
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST':
+        if 'set_params' in request.form:
+            state['w'] = int(request.form.get('w', 0))
+            state['t'] = int(request.form.get('t', 0))
+            total_bits = state['w'] + state['t'] + 1
+            state['bits'] = [0] * total_bits
+
+        elif 'convert_hex' in request.form:
+            hex_str = request.form.get('hex_value', '').strip()
+            state['hex_value'] = hex_str
+            total_bits = state['w'] + state['t'] + 1
+
+            try:
+                num = int(hex_str, 16)
+                # print(f"total_bits={total_bits}")
+                # print(f"num={num}")
+                # print(f"bin(num)={bin(num)}")
+                # print(f"bin(num)[2:]={bin(num)[2:]}")
+                binary_str = bin(num)[2:].zfill(total_bits)
+                # print(f"binary_str={binary_str}")
+                # print(f"len_binary_str1={len(binary_str)}")
+                binary_str = binary_str[-total_bits:]  # Ensure correct length
+                # print(f"len_binary_str2={len(binary_str)}")
+            except ValueError:
+                binary_str = '0' * total_bits
+
+            exponent_width = state['w']
+            significand_with = state['t']
+            fp_value = custom_converter.custom_to_double(binary_str, exponent_width, significand_with)
+            diff_with_nearest = custom_converter.calculate_diff(binary_str, exponent_width, significand_with)
+            state['bits'] = [int(bit) for bit in binary_str]
+            state['binary_str'] = binary_str
+            state['fp_value'] = f"{fp_value:.17e}"
+            state['diff_with_nearest'] = f"{diff_with_nearest:.17e}"
+
+        elif 'convert' in request.form:
+            binary_str = ''.join(map(str, state['bits']))
+            exponent_width = state['w']
+            significand_with = state['t']
+            fp_value = custom_converter.custom_to_double(binary_str, exponent_width, significand_with)
+            diff_with_nearest = custom_converter.calculate_diff(binary_str, exponent_width, significand_with)
+            state['binary_str'] = binary_str
+            state['fp_value'] = f"{fp_value:.17e}"
+            state['diff_with_nearest'] = f"{diff_with_nearest:.17e}"
+
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Hex to Float Converter</title>
+        <style>
+            .bit-btn {
+                width: 30px;           
+                height: 40px;        
+                margin: 2px;
+                border: 1px solid #333;
+                font-weight: bold;
+                background-color: #f0f0f0;
+            }
+            button[name="set_params"] {
+                width: 120px;          
+                height: 40px;          
+                min-width: 100px;      
+            }
+            button[name="convert_hex"] {
+                width: 120px;         
+                height: 40px;          
+                min-width: 100px;      
+            }
+            button[name="convert"] {
+                width: 120px;          
+                height: 40px;          
+                min-width: 100px;    
+            }
+            .container { margin: 20px; font-family: Arial, sans-serif; }
+            .input-group {
+                border: 2px solid #666;
+                padding: 20px;
+                margin: 15px 0;
+                background: #f8f8f8;
+            }
+            .bit-group {
+                display: inline-block;
+                padding: 8px;
+                margin: 4px;
+            }
+            .sign-bit { background: #ff4444; }    /* 红色符号位 */
+            .exp-bits { background: #44ff44; }    /* 绿色指数位 */
+            .frac-bits { background: #4444ff; }   /* 蓝色尾数位 */
+            .output-box {
+                border: 2px solid #666;
+                padding: 10px;
+                margin: 15px 0;
+                line-height: 2.5;
+                background: #f0f0f0;
+                font-size: 16px;
+            }
+            input[type="number"] {
+                width: 58px;
+                padding: 10px;
+                margin-right: 15px;
+            }
+            input[type="text"] {
+                width: 120px;
+                padding: 10px;
+                margin-right: 15px;
+            }
+            input[name="binary_str"] {
+                width: 400px;
+                padding: 10px;
+                margin-left: 45px;
+            }
+            input[name="fp_value"] {
+                width: 400px;
+                padding: 10px;
+                margin-left: 70px;
+            }
+            input[name="diff_with_nearest"] {
+                width: 400px;
+                padding: 10px;
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form method="post">
+                <!-- 参数输入行 -->
+                <div class="input-group">
+                    W <input type="number" name="w" value="{{ state.w }}">
+                    T <input type="number" name="t" value="{{ state.t }}">
+                    <button type="submit" name="set_params" style="background: #e0e0e0;">Expand</button>
+                </div>
+
+                <!-- Hex输入行 -->
+                <div class="input-group">
+                    <label>hex_value</label>
+                    <input type="text" name="hex_value" value="{{ state.hex_value }}">
+                    <button type="submit" name="convert_hex" style="background: #e0e0e0;">Convert to float</button>
+                </div>
+
+                <!-- 二进制位分组显示 -->
+                {% if state.bits %}
+                <div class="input-group">
+                    <div class="bit-group sign-bit">
+                        <button class="bit-btn" onclick="toggleBit(0)">{{ state.bits[0] }}</button>
+                    </div>
+                    <div class="bit-group exp-bits">
+                        {% for i in range(1, state.w+1) %}
+                        <button class="bit-btn" onclick="toggleBit({{ i }})">{{ state.bits[i] }}</button>
+                        {% endfor %}
+                    </div>
+                    <div class="bit-group frac-bits">
+                        {% for i in range(state.w+1, state.bits|length) %}
+                        <button class="bit-btn" onclick="toggleBit({{ i }})">{{ state.bits[i] }}</button>
+                        {% endfor %}
+                    </div>
+                    <button type="submit" name="convert" style="height:40px; background: #e0e0e0;">Update values</button>
+                </div>
+                {% endif %}
+            </form>
+
+            <!-- 输出结果区 -->
+            <div class="output-box">
+                <label>binary_input</label>
+                <input type="text" name="binary_str" value="{{ state.binary_str }}">
+            </div>
+            <div class="output-box">
+                <label>fp_value</label>
+                <input type="text" name="fp_value" value="{{ state.fp_value }}">
+            </div>
+            <div class="output-box">
+                <label>diff_with_nearest</label>
+                <input type="text" name="diff_with_nearest" value="{{ state.diff_with_nearest }}">
+            </div>
+        </div>
+
+        <script>
+            function toggleBit(index) {
+                fetch('/toggle', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({index: index})
+                }).then(response => response.json())
+                  .then(data => {
+                    document.querySelectorAll('.bit-btn')[index].textContent = data.new_value;
+                });
+            }
+        </script>
+    </body>
+    </html>
+    ''', state=state)
+
+@app.route('/toggle', methods=['POST'])
+def toggle_bit():
+    data = request.get_json()
+    index = data['index']
+    if 0 <= index < len(state['bits']):
+        state['bits'][index] = 1 - state['bits'][index]
+    return jsonify(new_value=state['bits'][index])
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
