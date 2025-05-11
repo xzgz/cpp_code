@@ -44,7 +44,7 @@ def index():
             exponent_width = state['w']
             significand_with = state['t']
             fp_value = custom_converter.custom_to_double(binary_str, exponent_width, significand_with)
-            diff_with_nearest = custom_converter.calculate_diff(binary_str, exponent_width, significand_with)
+            diff_with_nearest = custom_converter.calculate_diff_with_nearest(binary_str, exponent_width, significand_with)
             state['bits'] = [int(bit) for bit in binary_str]
             state['binary_str'] = binary_str
             state['fp_value'] = f"{fp_value:.17e}"
@@ -55,7 +55,7 @@ def index():
             exponent_width = state['w']
             significand_with = state['t']
             fp_value = custom_converter.custom_to_double(binary_str, exponent_width, significand_with)
-            diff_with_nearest = custom_converter.calculate_diff(binary_str, exponent_width, significand_with)
+            diff_with_nearest = custom_converter.calculate_diff_with_nearest(binary_str, exponent_width, significand_with)
             state['binary_str'] = binary_str
             state['fp_value'] = f"{fp_value:.17e}"
             state['diff_with_nearest'] = f"{diff_with_nearest:.17e}"

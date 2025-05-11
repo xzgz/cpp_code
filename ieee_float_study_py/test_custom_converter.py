@@ -11,7 +11,7 @@ def test_str2float():
         hex_str, exponent_width, significand_with = float_info
         bin_str = custom_converter.hex_to_binary(hex_str)
         fpx = custom_converter.custom_to_double(bin_str, exponent_width, significand_with)
-        diff_with_nearest = custom_converter.calculate_diff(bin_str, exponent_width, significand_with)
+        diff_with_nearest = custom_converter.calculate_diff_with_nearest(bin_str, exponent_width, significand_with)
         print(f"hex_input: {hex_str} binary_input: {bin_str} fp_value: {fpx:.17e} diff_with_nearest: {diff_with_nearest:.17e}")
 
 test_str2float()

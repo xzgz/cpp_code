@@ -125,7 +125,7 @@ double custom_to_double(const string& s, int w, int t) {
     return fp_val;
 }
 
-double calculate_diff(const string& s, int w, int t) {
+double calculate_diff_with_nearest(const string& s, int w, int t) {
     double diff = 0.0;
     const uint64_t sign_bit = binary_str_to_uint64(s, 0, 1);
     const uint64_t exp_raw = binary_str_to_uint64(s, 1, w);
@@ -170,8 +170,8 @@ PYBIND11_MODULE(custom_converter, m) {
           py::arg("w"),
           py::arg("t"),
           "Convert string to double with custom parameters");
-    m.def("calculate_diff",
-          &calculate_diff,
+    m.def("calculate_diff_with_nearest",
+          &calculate_diff_with_nearest,
           py::arg("s"),
           py::arg("w"),
           py::arg("t"),
