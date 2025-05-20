@@ -3,7 +3,6 @@
 #include "rocm_ops.hpp"
 #include "custom.h"
 
-PYBIND11_MODULE(TORCH_EXTENSION_NAME, m)
-{
-    CUSTOM_PYBIND;
+PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
+  CUSTOM_PYBIND;
 }

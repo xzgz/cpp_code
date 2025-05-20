@@ -34,8 +34,14 @@
 //               at::cuda::getCurrentCUDAStream(), rows_per_block);
 // }
 
-void LLGemm1(void* in_a, void* in_b, void* out_c, const int M, const int K, cudaStream_t stream,
-             const int rows_per_block = 4, const c10::ScalarType scalar_type = c10::ScalarType::Half);
+void LLGemm1(void* in_a,
+             void* in_b,
+             void* out_c,
+             const int M,
+             const int K,
+             cudaStream_t stream,
+             const int rows_per_block = 4,
+             const c10::ScalarType scalar_type = c10::ScalarType::Half);
 // template <typename T>
 void LLMM1(at::Tensor& in_a, at::Tensor& in_b, at::Tensor& out_c, const int64_t rows_per_block) {
   auto M = in_a.size(0);
@@ -54,12 +60,25 @@ void LLMM1(at::Tensor& in_a, at::Tensor& in_b, at::Tensor& out_c, const int64_t 
 
   // call the kernel function...
   const at::cuda::OptionalCUDAGuard device_guard(device_of(in_a));
-  LLGemm1(in_a.data_ptr(), in_b.data_ptr(), out_c.data_ptr(), M, K, at::cuda::getCurrentCUDAStream(), rows_per_block,
+  LLGemm1(in_a.data_ptr(),
+          in_b.data_ptr(),
+          out_c.data_ptr(),
+          M,
+          K,
+          at::cuda::getCurrentCUDAStream(),
+          rows_per_block,
           in_b.scalar_type());
 }
 
-void wvSplitK_(void* in_a, void* in_b, void* out_c, const int M, const int K, const int N, cudaStream_t stream,
-               const int CuCount = 0, const c10::ScalarType scalar_type = c10::ScalarType::Half);
+void wvSplitK_(void* in_a,
+               void* in_b,
+               void* out_c,
+               const int M,
+               const int K,
+               const int N,
+               cudaStream_t stream,
+               const int CuCount = 0,
+               const c10::ScalarType scalar_type = c10::ScalarType::Half);
 void wvSpltK(at::Tensor& in_a, at::Tensor& in_b, at::Tensor& out_c, const int64_t N_in, const int64_t CuCount) {
   auto M = in_a.size(0);
   auto K = in_a.size(1);
@@ -69,8 +88,45 @@ void wvSpltK(at::Tensor& in_a, at::Tensor& in_b, at::Tensor& out_c, const int64_
   TORCH_CHECK(in_a.dtype() == torch::kFloat16 || in_a.dtype() == torch::kBFloat16);
 
   const at::cuda::OptionalCUDAGuard device_guard(device_of(in_a));
-  wvSplitK_(in_a.data_ptr(), in_b.data_ptr(), out_c.data_ptr(), M, K, N, at::cuda::getCurrentCUDAStream(), CuCount,
+  wvSplitK_(in_a.data_ptr(),
+            in_b.data_ptr(),
+            out_c.data_ptr(),
+            M,
+            K,
+            N,
+            at::cuda::getCurrentCUDAStream(),
+            CuCount,
             in_b.scalar_type());
+}
+
+void wv_splitk_small_fp16_bf16(void* in_a,
+                               void* in_b,
+                               void* out_c,
+                               const int M,
+                               const int K,
+                               const int N,
+                               cudaStream_t stream,
+                               const int CuCount = 0,
+                               const c10::ScalarType scalar_type = c10::ScalarType::Half);
+void wv_splitk_small_fp16_bf16_wrapper(
+    at::Tensor& in_a, at::Tensor& in_b, at::Tensor& out_c, const int64_t N_in, const int64_t CuCount) {
+  auto M = in_a.size(0);
+  auto K = in_a.size(1);
+  int N = N_in;
+  TORCH_CHECK(in_a.dtype() == in_b.dtype());
+  TORCH_CHECK(K % 8 == 0, "k % 8 == 0");
+  TORCH_CHECK(in_a.dtype() == torch::kFloat16 || in_a.dtype() == torch::kBFloat16);
+
+  const at::cuda::OptionalCUDAGuard device_guard(device_of(in_a));
+  wv_splitk_small_fp16_bf16(in_a.data_ptr(),
+                            in_b.data_ptr(),
+                            out_c.data_ptr(),
+                            M,
+                            K,
+                            N,
+                            at::cuda::getCurrentCUDAStream(),
+                            CuCount,
+                            in_b.scalar_type());
 }
 
 void LLGemmZZ(void* in_a, void* in_b, void* out_c, const int M, const int K, cudaStream_t stream, const int solidx);
@@ -85,14 +141,30 @@ void LLZZ(at::Tensor in_a, at::Tensor in_b, at::Tensor out_c, const int64_t soli
 // template void AddGPU<float>(at::Tensor in_a, at::Tensor in_b, at::Tensor
 // out_c);
 
-void MMGPUKernel(float* in_a, float* in_b, float* out_c, int numARows, int numAColumns, int numBRows, int numBColumns,
-                 int numCRows, int numCColumns, cudaStream_t stream);
+void MMGPUKernel(float* in_a,
+                 float* in_b,
+                 float* out_c,
+                 int numARows,
+                 int numAColumns,
+                 int numBRows,
+                 int numBColumns,
+                 int numCRows,
+                 int numCColumns,
+                 cudaStream_t stream);
 
 void MMCustomGPU(at::Tensor& in_a, at::Tensor& in_b, at::Tensor& out_c) {
   auto matA_sizes{in_a.sizes()};
   auto matB_sizes{in_b.sizes()};
   auto matO_sizes{out_c.sizes()};
   const at::cuda::OptionalCUDAGuard device_guard(device_of(in_a));
-  MMGPUKernel(in_a.data_ptr<float>(), in_b.data_ptr<float>(), out_c.data_ptr<float>(), matA_sizes[0], matA_sizes[1],
-              matB_sizes[0], matB_sizes[1], matO_sizes[0], matO_sizes[1], at::cuda::getCurrentCUDAStream());
+  MMGPUKernel(in_a.data_ptr<float>(),
+              in_b.data_ptr<float>(),
+              out_c.data_ptr<float>(),
+              matA_sizes[0],
+              matA_sizes[1],
+              matB_sizes[0],
+              matB_sizes[1],
+              matO_sizes[0],
+              matO_sizes[1],
+              at::cuda::getCurrentCUDAStream());
 }

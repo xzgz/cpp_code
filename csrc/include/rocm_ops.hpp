@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 // Copyright (C) 2024-2025, Advanced Micro Devices, Inc. All rights reserved.
 
+// clang-format off
+
 #define ACTIVATION_PYBIND                                                                               \
       m.def("silu_and_mul", &silu_and_mul, "Activation function used in SwiGLU.");                      \
       m.def("scaled_silu_and_mul", &scaled_silu_and_mul, "Activation function used in scaled SwiGLU."); \
@@ -172,11 +174,19 @@
       m.def("allocate_meta_buffer", &allocate_meta_buffer, py::arg("size"));                            \
       m.def("get_meta_buffer_ipc_handle", &get_meta_buffer_ipc_handle, py::arg("inp"));
 
-#define CUSTOM_PYBIND                                                                                 \
-      m.def("wvSpltK", &wvSpltK, "wvSpltK(Tensor in_a, Tensor in_b, Tensor! out_c, int N_in,"         \
-                                 "        int CuCount) -> ()");                                       \
-      m.def("LLMM1", &LLMM1, "LLMM1(Tensor in_a, Tensor in_b, Tensor! out_c, int rows_per_block) -> " \
-                             "()");
+#define CUSTOM_PYBIND                                                                  \
+  m.def("wvSpltK",                                                                     \
+        &wvSpltK,                                                                      \
+        "wvSpltK(Tensor in_a, Tensor in_b, Tensor! out_c, int N_in,"                   \
+        "        int CuCount) -> ()");                                                 \
+  m.def("wv_splitk_small_fp16_bf16",                                                   \
+        &wv_splitk_small_fp16_bf16_wrapper,                                            \
+        "wv_splitk_small_fp16_bf16(Tensor in_a, Tensor in_b, Tensor! out_c, int N_in," \
+        "        int CuCount) -> ()");                                                 \
+  m.def("LLMM1",                                                                       \
+        &LLMM1,                                                                        \
+        "LLMM1(Tensor in_a, Tensor in_b, Tensor! out_c, int rows_per_block) -> "       \
+        "()");
 
 #define GEMM_A8W8_ASM_PYBIND                                              \
       m.def("gemm_a8w8_asm", &gemm_a8w8_asm,                              \
