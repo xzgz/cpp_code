@@ -4,28 +4,54 @@ import custom_converter
 app = Flask(__name__)
 
 state = {
-    "w": 8,
-    "t": 23,
+    "E": 8,
+    "M": 23,
     "bits": [0] * 32,
     "binary_str": "",
     "hex_value": "0x3F800000",
     "fp_value": "",
-    "diff_with_nearest": ""
+    "diff_with_nearest": "",
+    "exp_bias": 0,
+    "exp_max": 0,
+    "exp_val": 0,
 }
+
+def binary_str_to_uint64(s: str, start: int, length: int) -> int:
+    if not all(c in '01' for c in s[start:start+length]):
+        raise ValueError("Input string must contain only '0' and '1'")
+    return int(s[start:start+length], 2) & 0xFFFFFFFFFFFFFFFF
+    # val = 0
+    # for i in range(length):
+    #     val = (val << 1) | (ord(s[start + i]) - ord('0'))
+    # return val
+
+exp_bias = 0
+exp_max = 0
+exp_val = 0
+binary_str = ""
+fp_value = 0
+diff_with_nearest = 0
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    global exp_bias
+    global exp_max
+    global exp_val
+    global binary_str
+    global fp_value
+    global diff_with_nearest
     if request.method == 'POST':
+        # print(f"binary_str={binary_str}")
         if 'set_params' in request.form:
-            state['w'] = int(request.form.get('w', 0))
-            state['t'] = int(request.form.get('t', 0))
-            total_bits = state['w'] + state['t'] + 1
+            state['E'] = int(request.form.get('E', 0))
+            state['M'] = int(request.form.get('M', 0))
+            total_bits = state['E'] + state['M'] + 1
             state['bits'] = [0] * total_bits
 
         elif 'convert_hex' in request.form:
             hex_str = request.form.get('hex_value', '').strip()
             state['hex_value'] = hex_str
-            total_bits = state['w'] + state['t'] + 1
+            total_bits = state['E'] + state['M'] + 1
 
             try:
                 num = int(hex_str, 16)
@@ -38,27 +64,44 @@ def index():
                 # print(f"len_binary_str1={len(binary_str)}")
                 binary_str = binary_str[-total_bits:]  # Ensure correct length
                 # print(f"len_binary_str2={len(binary_str)}")
+
+                exp_raw_val = binary_str_to_uint64(binary_str, 1, state['E'])
+                exp_val = exp_raw_val - exp_bias
+                if exp_raw_val == 0:
+                    exp_val = 1 - exp_bias
             except ValueError:
                 binary_str = '0' * total_bits
 
-            exponent_width = state['w']
-            significand_with = state['t']
+            exponent_width = state['E']
+            significand_with = state['M']
             fp_value = custom_converter.custom_to_double(binary_str, exponent_width, significand_with)
             diff_with_nearest = custom_converter.calculate_diff_with_nearest(binary_str, exponent_width, significand_with)
             state['bits'] = [int(bit) for bit in binary_str]
-            state['binary_str'] = binary_str
-            state['fp_value'] = f"{fp_value:.17e}"
-            state['diff_with_nearest'] = f"{diff_with_nearest:.17e}"
 
         elif 'convert' in request.form:
             binary_str = ''.join(map(str, state['bits']))
-            exponent_width = state['w']
-            significand_with = state['t']
+            exponent_width = state['E']
+            significand_with = state['M']
             fp_value = custom_converter.custom_to_double(binary_str, exponent_width, significand_with)
             diff_with_nearest = custom_converter.calculate_diff_with_nearest(binary_str, exponent_width, significand_with)
-            state['binary_str'] = binary_str
-            state['fp_value'] = f"{fp_value:.17e}"
-            state['diff_with_nearest'] = f"{diff_with_nearest:.17e}"
+
+            exp_raw_val = binary_str_to_uint64(binary_str, 1, state['E'])
+            exp_val = exp_raw_val - exp_bias
+            if exp_raw_val == 0:
+                exp_val = 1 - exp_bias
+
+        state['binary_str'] = binary_str
+        state['fp_value'] = f"{fp_value:.17e}"
+        state['diff_with_nearest'] = f"{diff_with_nearest:.17e}"
+
+        exp_bias = (1 << (state['E'] - 1)) - 1
+        exp_max = (1 << state['E']) - 1
+        state['exp_bias'] = exp_bias
+        state['exp_max'] = exp_max
+        state['exp_val'] = exp_val
+        # print(f"exp_bias={exp_bias}")
+        # print(f"exp_max={exp_max}")
+        # print(f"exp_val={exp_val}")
 
     return render_template_string('''
     <!DOCTYPE html>
@@ -67,8 +110,8 @@ def index():
         <title>Hex to Float Converter</title>
         <style>
             .bit-btn {
-                width: 30px;           
-                height: 40px;        
+                width: 20px;
+                height: 20px;
                 margin: 2px;
                 border: 1px solid #333;
                 font-weight: bold;
@@ -137,6 +180,21 @@ def index():
                 padding: 10px;
                 margin-left: 10px;
             }
+            input[name="exp_bias"] {
+                width: 400px;
+                padding: 10px;
+                margin-left: 10px;
+            }
+            input[name="exp_max"] {
+                width: 400px;
+                padding: 10px;
+                margin-left: 10px;
+            }
+            input[name="exp_val"] {
+                width: 400px;
+                padding: 10px;
+                margin-left: 10px;
+            }
         </style>
     </head>
     <body>
@@ -144,8 +202,8 @@ def index():
             <form method="post">
                 <!-- 参数输入行 -->
                 <div class="input-group">
-                    W <input type="number" name="w" value="{{ state.w }}">
-                    T <input type="number" name="t" value="{{ state.t }}">
+                    E <input type="number" name="E" value="{{ state.E }}">
+                    M <input type="number" name="M" value="{{ state.M }}">
                     <button type="submit" name="set_params" style="background: #e0e0e0;">Expand</button>
                 </div>
 
@@ -163,12 +221,12 @@ def index():
                         <button class="bit-btn" onclick="toggleBit(0)">{{ state.bits[0] }}</button>
                     </div>
                     <div class="bit-group exp-bits">
-                        {% for i in range(1, state.w+1) %}
+                        {% for i in range(1, state.E+1) %}
                         <button class="bit-btn" onclick="toggleBit({{ i }})">{{ state.bits[i] }}</button>
                         {% endfor %}
                     </div>
                     <div class="bit-group frac-bits">
-                        {% for i in range(state.w+1, state.bits|length) %}
+                        {% for i in range(state.E+1, state.bits|length) %}
                         <button class="bit-btn" onclick="toggleBit({{ i }})">{{ state.bits[i] }}</button>
                         {% endfor %}
                     </div>
@@ -189,6 +247,18 @@ def index():
             <div class="output-box">
                 <label>diff_with_nearest</label>
                 <input type="text" name="diff_with_nearest" value="{{ state.diff_with_nearest }}">
+            </div>
+            <div class="output-box">
+                <label>exp_bias</label>
+                <input type="text" name="exp_bias" value="{{ state.exp_bias }}">
+            </div>
+            <div class="output-box">
+                <label>exp_max</label>
+                <input type="text" name="exp_max" value="{{ state.exp_max }}">
+            </div>
+            <div class="output-box">
+                <label>exp_val</label>
+                <input type="text" name="exp_val" value="{{ state.exp_val }}">
             </div>
         </div>
 
