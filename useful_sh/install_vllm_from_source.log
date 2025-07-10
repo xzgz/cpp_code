@@ -1,0 +1,1185 @@
+Requirement already satisfied: pip in /usr/local/lib/python3.12/dist-packages (25.1.1)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Processing /opt/rocm/share/amd_smi
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: PyYAML>=3.0 in /usr/local/lib/python3.12/dist-packages (from amdsmi==24.7.1+0012a68) (6.0.2)
+Building wheels for collected packages: amdsmi
+  Building wheel for amdsmi (pyproject.toml): started
+  Building wheel for amdsmi (pyproject.toml): finished with status 'done'
+  Created wheel for amdsmi: filename=amdsmi-24.7.1+0012a68-py3-none-any.whl size=642086 sha256=923ca093b32422facf3e4160ea25d350fe18e68700b4a10fa8a04b8e4c7058fe
+  Stored in directory: /tmp/pip-ephem-wheel-cache-1g2cb_5v/wheels/58/e4/11/a69cbfe723395fcfcc2bbd45800d994ae511e63c9d6242f5b1
+Successfully built amdsmi
+Installing collected packages: amdsmi
+  Attempting uninstall: amdsmi
+    Found existing installation: amdsmi 24.7.1+0012a68
+    Uninstalling amdsmi-24.7.1+0012a68:
+      Successfully uninstalled amdsmi-24.7.1+0012a68
+Successfully installed amdsmi-24.7.1+0012a68
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Requirement already satisfied: numba in /usr/local/lib/python3.12/dist-packages (0.61.2)
+Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (1.16.0)
+Requirement already satisfied: setuptools_scm in /usr/local/lib/python3.12/dist-packages (8.3.1)
+Requirement already satisfied: huggingface-hub[cli,hf_transfer] in /usr/local/lib/python3.12/dist-packages (0.33.3)
+Requirement already satisfied: llvmlite<0.45,>=0.44.0dev0 in /usr/local/lib/python3.12/dist-packages (from numba) (0.44.0)
+Requirement already satisfied: numpy<2.3,>=1.24 in /usr/local/lib/python3.12/dist-packages (from numba) (1.26.4)
+Requirement already satisfied: filelock in /usr/local/lib/python3.12/dist-packages (from huggingface-hub[cli,hf_transfer]) (3.17.0)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub[cli,hf_transfer]) (2024.9.0)
+Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub[cli,hf_transfer]) (24.2)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub[cli,hf_transfer]) (6.0.2)
+Requirement already satisfied: requests in /usr/local/lib/python3.12/dist-packages (from huggingface-hub[cli,hf_transfer]) (2.32.3)
+Requirement already satisfied: tqdm>=4.42.1 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub[cli,hf_transfer]) (4.67.1)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub[cli,hf_transfer]) (4.12.2)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.2 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub[cli,hf_transfer]) (1.1.5)
+Requirement already satisfied: InquirerPy==0.3.4 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub[cli,hf_transfer]) (0.3.4)
+Requirement already satisfied: hf-transfer>=0.1.4 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub[cli,hf_transfer]) (0.1.9)
+Requirement already satisfied: pfzy<0.4.0,>=0.3.1 in /usr/local/lib/python3.12/dist-packages (from InquirerPy==0.3.4->huggingface-hub[cli,hf_transfer]) (0.3.4)
+Requirement already satisfied: prompt-toolkit<4.0.0,>=3.0.1 in /usr/local/lib/python3.12/dist-packages (from InquirerPy==0.3.4->huggingface-hub[cli,hf_transfer]) (3.0.50)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.12/dist-packages (from prompt-toolkit<4.0.0,>=3.0.1->InquirerPy==0.3.4->huggingface-hub[cli,hf_transfer]) (0.2.13)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.12/dist-packages (from setuptools_scm) (79.0.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.12/dist-packages (from requests->huggingface-hub[cli,hf_transfer]) (3.4.1)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.12/dist-packages (from requests->huggingface-hub[cli,hf_transfer]) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.12/dist-packages (from requests->huggingface-hub[cli,hf_transfer]) (2.3.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.12/dist-packages (from requests->huggingface-hub[cli,hf_transfer]) (2025.1.31)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Requirement already satisfied: numpy<2 in /usr/local/lib/python3.12/dist-packages (1.26.4)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Ignoring importlib_metadata: markers 'python_version < "3.10"' don't match your environment
+Ignoring numba: markers 'python_version == "3.9"' don't match your environment
+Requirement already satisfied: regex in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 1)) (2024.11.6)
+Requirement already satisfied: cachetools in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 2)) (6.1.0)
+Requirement already satisfied: psutil in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 3)) (6.1.1)
+Requirement already satisfied: sentencepiece in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 4)) (0.2.0)
+Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 5)) (1.26.4)
+Requirement already satisfied: requests>=2.26.0 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 6)) (2.32.3)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 7)) (4.67.1)
+Requirement already satisfied: blake3 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 8)) (1.0.4)
+Requirement already satisfied: py-cpuinfo in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 9)) (9.0.0)
+Requirement already satisfied: transformers>=4.51.1 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 10)) (4.53.1)
+Requirement already satisfied: huggingface-hub>=0.33.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub[hf_xet]>=0.33.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 11)) (0.33.3)
+Requirement already satisfied: tokenizers>=0.21.1 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 12)) (0.21.2)
+Requirement already satisfied: protobuf in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 13)) (5.29.3)
+Requirement already satisfied: fastapi>=0.115.0 in /usr/local/lib/python3.12/dist-packages (from fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (0.115.8)
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 15)) (3.11.11)
+Requirement already satisfied: openai<=1.90.0,>=1.87.0 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 16)) (1.90.0)
+Requirement already satisfied: pydantic>=2.10 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 17)) (2.10.6)
+Requirement already satisfied: prometheus_client>=0.18.0 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 18)) (0.21.1)
+Requirement already satisfied: pillow in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 19)) (10.4.0)
+Requirement already satisfied: prometheus-fastapi-instrumentator>=7.0.0 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 20)) (7.0.2)
+Requirement already satisfied: tiktoken>=0.6.0 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 21)) (0.7.0)
+Requirement already satisfied: lm-format-enforcer<0.11,>=0.10.11 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 22)) (0.10.11)
+Requirement already satisfied: llguidance<0.8.0,>=0.7.11 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 23)) (0.7.30)
+Requirement already satisfied: outlines==0.1.11 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (0.1.11)
+Requirement already satisfied: lark==1.2.2 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 25)) (1.2.2)
+Requirement already satisfied: xgrammar==0.1.19 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 26)) (0.1.19)
+Requirement already satisfied: typing_extensions>=4.10 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 27)) (4.12.2)
+Requirement already satisfied: filelock>=3.16.1 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 28)) (3.17.0)
+Requirement already satisfied: partial-json-parser in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 29)) (0.2.1.1.post5)
+Requirement already satisfied: pyzmq>=25.0.0 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 30)) (26.2.1)
+Requirement already satisfied: msgspec in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 31)) (0.19.0)
+Requirement already satisfied: gguf>=0.13.0 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 32)) (0.17.1)
+Requirement already satisfied: mistral_common>=1.6.2 in /usr/local/lib/python3.12/dist-packages (from mistral_common[opencv]>=1.6.2->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 34)) (1.7.0)
+Requirement already satisfied: opencv-python-headless>=4.11.0 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 35)) (4.11.0.86)
+Requirement already satisfied: pyyaml in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 36)) (6.0.2)
+Requirement already satisfied: six>=1.16.0 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 37)) (1.17.0)
+Requirement already satisfied: setuptools<80,>=77.0.3 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 38)) (79.0.1)
+Requirement already satisfied: einops in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 39)) (0.8.0)
+Requirement already satisfied: compressed-tensors==0.10.2 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 40)) (0.10.2)
+Requirement already satisfied: depyf==0.18.0 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 41)) (0.18.0)
+Requirement already satisfied: cloudpickle in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 42)) (3.1.1)
+Requirement already satisfied: watchfiles in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 43)) (1.0.4)
+Requirement already satisfied: python-json-logger in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 44)) (3.3.0)
+Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 45)) (1.16.0)
+Requirement already satisfied: ninja in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 46)) (1.11.1.3)
+Requirement already satisfied: pybase64 in /usr/local/lib/python3.12/dist-packages (from -r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 47)) (1.4.1)
+Requirement already satisfied: numba==0.61.2 in /usr/local/lib/python3.12/dist-packages (from -r requirements/rocm.txt (line 5)) (0.61.2)
+Requirement already satisfied: boto3 in /usr/local/lib/python3.12/dist-packages (from -r requirements/rocm.txt (line 8)) (1.36.12)
+Requirement already satisfied: botocore in /usr/local/lib/python3.12/dist-packages (from -r requirements/rocm.txt (line 9)) (1.36.12)
+Requirement already satisfied: datasets in /usr/local/lib/python3.12/dist-packages (from -r requirements/rocm.txt (line 10)) (3.2.0)
+Requirement already satisfied: ray<2.45.0,>=2.10.0 in /usr/local/lib/python3.12/dist-packages (from -r requirements/rocm.txt (line 11)) (2.41.0)
+Requirement already satisfied: peft in /usr/local/lib/python3.12/dist-packages (from -r requirements/rocm.txt (line 12)) (0.14.0)
+Requirement already satisfied: pytest-asyncio in /usr/local/lib/python3.12/dist-packages (from -r requirements/rocm.txt (line 13)) (0.25.3)
+Requirement already satisfied: tensorizer==2.10.1 in /usr/local/lib/python3.12/dist-packages (from -r requirements/rocm.txt (line 14)) (2.10.1)
+Requirement already satisfied: packaging>=24.2 in /usr/local/lib/python3.12/dist-packages (from -r requirements/rocm.txt (line 15)) (24.2)
+Requirement already satisfied: setuptools-scm>=8 in /usr/local/lib/python3.12/dist-packages (from -r requirements/rocm.txt (line 17)) (8.3.1)
+Requirement already satisfied: runai-model-streamer==0.11.0 in /usr/local/lib/python3.12/dist-packages (from -r requirements/rocm.txt (line 18)) (0.11.0)
+Requirement already satisfied: runai-model-streamer-s3==0.11.0 in /usr/local/lib/python3.12/dist-packages (from -r requirements/rocm.txt (line 19)) (0.11.0)
+Requirement already satisfied: interegular in /usr/local/lib/python3.12/dist-packages (from outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (0.3.3)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.12/dist-packages (from outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (3.1.5)
+Requirement already satisfied: nest_asyncio in /usr/local/lib/python3.12/dist-packages (from outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (1.6.0)
+Requirement already satisfied: diskcache in /usr/local/lib/python3.12/dist-packages (from outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (5.6.3)
+Requirement already satisfied: referencing in /usr/local/lib/python3.12/dist-packages (from outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (0.36.2)
+Requirement already satisfied: jsonschema in /usr/local/lib/python3.12/dist-packages (from outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (4.23.0)
+Requirement already satisfied: pycountry in /usr/local/lib/python3.12/dist-packages (from outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (24.6.1)
+Requirement already satisfied: airportsdata in /usr/local/lib/python3.12/dist-packages (from outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (20241001)
+Requirement already satisfied: torch in /usr/local/lib/python3.12/dist-packages (from outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (2.7.0a0+git3a58512)
+Requirement already satisfied: outlines_core==0.1.26 in /usr/local/lib/python3.12/dist-packages (from outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (0.1.26)
+Requirement already satisfied: triton in /usr/local/lib/python3.12/dist-packages (from xgrammar==0.1.19->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 26)) (3.2.0+gite5be006a)
+Requirement already satisfied: astor in /usr/local/lib/python3.12/dist-packages (from depyf==0.18.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 41)) (0.8.1)
+Requirement already satisfied: dill in /usr/local/lib/python3.12/dist-packages (from depyf==0.18.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 41)) (0.3.8)
+Requirement already satisfied: llvmlite<0.45,>=0.44.0dev0 in /usr/local/lib/python3.12/dist-packages (from numba==0.61.2->-r requirements/rocm.txt (line 5)) (0.44.0)
+Requirement already satisfied: redis>=4.5.5 in /usr/local/lib/python3.12/dist-packages (from tensorizer==2.10.1->-r requirements/rocm.txt (line 14)) (5.2.1)
+Requirement already satisfied: hiredis>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from tensorizer==2.10.1->-r requirements/rocm.txt (line 14)) (3.1.0)
+Requirement already satisfied: libnacl>=2.1.0 in /usr/local/lib/python3.12/dist-packages (from tensorizer==2.10.1->-r requirements/rocm.txt (line 14)) (2.1.0)
+Requirement already satisfied: humanize in /usr/local/lib/python3.12/dist-packages (from runai-model-streamer==0.11.0->-r requirements/rocm.txt (line 18)) (4.12.3)
+Requirement already satisfied: anyio<5,>=3.5.0 in /usr/local/lib/python3.12/dist-packages (from openai<=1.90.0,>=1.87.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 16)) (4.8.0)
+Requirement already satisfied: distro<2,>=1.7.0 in /usr/lib/python3/dist-packages (from openai<=1.90.0,>=1.87.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 16)) (1.7.0)
+Requirement already satisfied: httpx<1,>=0.23.0 in /usr/local/lib/python3.12/dist-packages (from openai<=1.90.0,>=1.87.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 16)) (0.28.1)
+Requirement already satisfied: jiter<1,>=0.4.0 in /usr/local/lib/python3.12/dist-packages (from openai<=1.90.0,>=1.87.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 16)) (0.8.2)
+Requirement already satisfied: sniffio in /usr/local/lib/python3.12/dist-packages (from openai<=1.90.0,>=1.87.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 16)) (1.3.1)
+Requirement already satisfied: annotated-types>=0.6.0 in /usr/local/lib/python3.12/dist-packages (from pydantic>=2.10->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 17)) (0.7.0)
+Requirement already satisfied: pydantic-core==2.27.2 in /usr/local/lib/python3.12/dist-packages (from pydantic>=2.10->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 17)) (2.27.2)
+Requirement already satisfied: click>=7.0 in /usr/local/lib/python3.12/dist-packages (from ray<2.45.0,>=2.10.0->-r requirements/rocm.txt (line 11)) (8.1.8)
+Requirement already satisfied: msgpack<2.0.0,>=1.0.0 in /usr/local/lib/python3.12/dist-packages (from ray<2.45.0,>=2.10.0->-r requirements/rocm.txt (line 11)) (1.1.0)
+Requirement already satisfied: aiosignal in /usr/local/lib/python3.12/dist-packages (from ray<2.45.0,>=2.10.0->-r requirements/rocm.txt (line 11)) (1.3.2)
+Requirement already satisfied: frozenlist in /usr/local/lib/python3.12/dist-packages (from ray<2.45.0,>=2.10.0->-r requirements/rocm.txt (line 11)) (1.5.0)
+Requirement already satisfied: idna>=2.8 in /usr/local/lib/python3.12/dist-packages (from anyio<5,>=3.5.0->openai<=1.90.0,>=1.87.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 16)) (3.10)
+Requirement already satisfied: certifi in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->openai<=1.90.0,>=1.87.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 16)) (2025.1.31)
+Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->openai<=1.90.0,>=1.87.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 16)) (1.0.7)
+Requirement already satisfied: h11<0.15,>=0.13 in /usr/local/lib/python3.12/dist-packages (from httpcore==1.*->httpx<1,>=0.23.0->openai<=1.90.0,>=1.87.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 16)) (0.14.0)
+Requirement already satisfied: sympy==1.13.1 in /usr/local/lib/python3.12/dist-packages (from torch->outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (1.13.1)
+Requirement already satisfied: networkx in /usr/local/lib/python3.12/dist-packages (from torch->outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (3.4.2)
+Requirement already satisfied: fsspec in /usr/local/lib/python3.12/dist-packages (from torch->outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (2024.9.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.12/dist-packages (from sympy==1.13.1->torch->outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (1.3.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.12/dist-packages (from requests>=2.26.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 6)) (3.4.1)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.12/dist-packages (from requests>=2.26.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 6)) (2.3.0)
+Requirement already satisfied: safetensors>=0.4.3 in /usr/local/lib/python3.12/dist-packages (from transformers>=4.51.1->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 10)) (0.5.2)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.2 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub>=0.33.0->huggingface-hub[hf_xet]>=0.33.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 11)) (1.1.5)
+Requirement already satisfied: starlette<0.46.0,>=0.40.0 in /usr/local/lib/python3.12/dist-packages (from fastapi>=0.115.0->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (0.45.3)
+Requirement already satisfied: aiohappyeyeballs>=2.3.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 15)) (2.4.4)
+Requirement already satisfied: attrs>=17.3.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 15)) (25.1.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /usr/local/lib/python3.12/dist-packages (from aiohttp->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 15)) (6.1.0)
+Requirement already satisfied: propcache>=0.2.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 15)) (0.2.1)
+Requirement already satisfied: yarl<2.0,>=1.17.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 15)) (1.18.3)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /usr/local/lib/python3.12/dist-packages (from boto3->-r requirements/rocm.txt (line 8)) (1.0.1)
+Requirement already satisfied: s3transfer<0.12.0,>=0.11.0 in /usr/local/lib/python3.12/dist-packages (from boto3->-r requirements/rocm.txt (line 8)) (0.11.2)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /usr/local/lib/python3.12/dist-packages (from botocore->-r requirements/rocm.txt (line 9)) (2.9.0.post0)
+Requirement already satisfied: pyarrow>=15.0.0 in /usr/local/lib/python3.12/dist-packages (from datasets->-r requirements/rocm.txt (line 10)) (19.0.0)
+Requirement already satisfied: pandas in /usr/local/lib/python3.12/dist-packages (from datasets->-r requirements/rocm.txt (line 10)) (2.2.3)
+Requirement already satisfied: xxhash in /usr/local/lib/python3.12/dist-packages (from datasets->-r requirements/rocm.txt (line 10)) (3.5.0)
+Requirement already satisfied: multiprocess<0.70.17 in /usr/local/lib/python3.12/dist-packages (from datasets->-r requirements/rocm.txt (line 10)) (0.70.16)
+Requirement already satisfied: accelerate>=0.21.0 in /usr/local/lib/python3.12/dist-packages (from peft->-r requirements/rocm.txt (line 12)) (1.3.0)
+Requirement already satisfied: pytest<9,>=8.2 in /usr/local/lib/python3.12/dist-packages (from pytest-asyncio->-r requirements/rocm.txt (line 13)) (8.3.4)
+Requirement already satisfied: iniconfig in /usr/local/lib/python3.12/dist-packages (from pytest<9,>=8.2->pytest-asyncio->-r requirements/rocm.txt (line 13)) (2.0.0)
+Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.12/dist-packages (from pytest<9,>=8.2->pytest-asyncio->-r requirements/rocm.txt (line 13)) (1.5.0)
+Requirement already satisfied: fastapi-cli>=0.0.5 in /usr/local/lib/python3.12/dist-packages (from fastapi-cli[standard]>=0.0.5; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (0.0.8)
+Requirement already satisfied: python-multipart>=0.0.18 in /usr/local/lib/python3.12/dist-packages (from fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (0.0.20)
+Requirement already satisfied: email-validator>=2.0.0 in /usr/local/lib/python3.12/dist-packages (from fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (2.2.0)
+Requirement already satisfied: uvicorn>=0.12.0 in /usr/local/lib/python3.12/dist-packages (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (0.34.0)
+Requirement already satisfied: dnspython>=2.0.0 in /usr/local/lib/python3.12/dist-packages (from email-validator>=2.0.0->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (2.7.0)
+Requirement already satisfied: typer>=0.15.1 in /usr/local/lib/python3.12/dist-packages (from fastapi-cli>=0.0.5->fastapi-cli[standard]>=0.0.5; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (0.16.0)
+Requirement already satisfied: rich-toolkit>=0.14.8 in /usr/local/lib/python3.12/dist-packages (from fastapi-cli>=0.0.5->fastapi-cli[standard]>=0.0.5; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (0.14.8)
+Requirement already satisfied: fastapi-cloud-cli>=0.1.1 in /usr/local/lib/python3.12/dist-packages (from fastapi-cli[standard]>=0.0.5; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (0.1.2)
+Requirement already satisfied: rignore>=0.5.1 in /usr/local/lib/python3.12/dist-packages (from fastapi-cloud-cli>=0.1.1->fastapi-cli[standard]>=0.0.5; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (0.5.1)
+Requirement already satisfied: sentry-sdk>=2.20.0 in /usr/local/lib/python3.12/dist-packages (from fastapi-cloud-cli>=0.1.1->fastapi-cli[standard]>=0.0.5; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (2.32.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.12/dist-packages (from jinja2->outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (3.0.2)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /usr/local/lib/python3.12/dist-packages (from jsonschema->outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (2024.10.1)
+Requirement already satisfied: rpds-py>=0.7.1 in /usr/local/lib/python3.12/dist-packages (from jsonschema->outlines==0.1.11->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 24)) (0.22.3)
+Requirement already satisfied: rich>=13.7.1 in /usr/local/lib/python3.12/dist-packages (from rich-toolkit>=0.14.8->fastapi-cli>=0.0.5->fastapi-cli[standard]>=0.0.5; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (14.0.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.5->fastapi-cli[standard]>=0.0.5; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.5->fastapi-cli[standard]>=0.0.5; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (2.19.2)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.5->fastapi-cli[standard]>=0.0.5; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (0.1.2)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/dist-packages (from typer>=0.15.1->fastapi-cli>=0.0.5->fastapi-cli[standard]>=0.0.5; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (1.5.4)
+Requirement already satisfied: httptools>=0.6.3 in /usr/local/lib/python3.12/dist-packages (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (0.6.4)
+Requirement already satisfied: python-dotenv>=0.13 in /usr/local/lib/python3.12/dist-packages (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (1.0.1)
+Requirement already satisfied: uvloop!=0.15.0,!=0.15.1,>=0.14.0 in /usr/local/lib/python3.12/dist-packages (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (0.21.0)
+Requirement already satisfied: websockets>=10.4 in /usr/local/lib/python3.12/dist-packages (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->-r /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/requirements/common.txt (line 14)) (14.2)
+Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.12/dist-packages (from pandas->datasets->-r requirements/rocm.txt (line 10)) (2025.1)
+Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.12/dist-packages (from pandas->datasets->-r requirements/rocm.txt (line 10)) (2025.1)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+running develop
+/usr/local/lib/python3.12/dist-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` and ``easy_install``.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://github.com/pypa/setuptools/issues/917 for details.
+        ********************************************************************************
+
+!!
+  easy_install.initialize_options(self)
+/usr/local/lib/python3.12/dist-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+running egg_info
+writing vllm.egg-info/PKG-INFO
+writing dependency_links to vllm.egg-info/dependency_links.txt
+writing entry points to vllm.egg-info/entry_points.txt
+writing requirements to vllm.egg-info/requires.txt
+writing top-level names to vllm.egg-info/top_level.txt
+[07/11/25 10:05:30] ERROR    listing git files failed - pretending there aren't any                                                                                                                                                                                  git.py:26
+reading manifest file 'vllm.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+writing manifest file 'vllm.egg-info/SOURCES.txt'
+running build_ext
+-- Build type: RelWithDebInfo
+-- Target device: cuda
+-- Found python matching: /usr/bin/python3.
+Building PyTorch for GPU arch: gfx90a;gfx942
+HIP VERSION: 6.3.42133-1b9c17779
+
+***** ROCm version from rocm_version.h ****
+
+ROCM_VERSION_DEV: 6.3.1
+ROCM_VERSION_DEV_MAJOR: 6
+ROCM_VERSION_DEV_MINOR: 3
+ROCM_VERSION_DEV_PATCH: 1
+ROCM_VERSION_DEV_INT:   60301
+HIP_VERSION_MAJOR: 6
+HIP_VERSION_MINOR: 3
+TORCH_HIP_VERSION: 603
+
+***** Library versions from cmake find_package *****
+
+hip VERSION: 6.3.42133
+amd_comgr VERSION: 2.8.0
+rocrand VERSION: 3.2.0
+hiprand VERSION: 2.11.1
+rocblas VERSION: 4.3.0
+hipblas VERSION: 2.3.0
+miopen VERSION: 3.3.0
+hipfft VERSION: 1.0.17
+hipsparse VERSION: 3.1.2
+rocprim VERSION: 3.3.0
+hipcub VERSION: 3.3.0
+rocthrust VERSION: 3.3.0
+hipsolver VERSION: 2.3.0
+CMake Deprecation Warning at /opt/rocm/lib/cmake/hiprtc/hiprtc-config.cmake:21 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Caffe2/public/LoadHIP.cmake:73 (find_package)
+  /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Caffe2/public/LoadHIP.cmake:160 (find_package_and_print_version)
+  /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:74 (include)
+  /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)
+  CMakeLists.txt:80 (find_package)
+
+
+hiprtc VERSION: 6.3.42133
+rccl VERSION: 2.21.5
+hsa-runtime64 VERSION: 1.14.60301
+hipblaslt VERSION: 0.12.0
+HIP is using new type enums
+hipblaslt is using scale pointer vec ext
+CMake Warning at /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Torch/TorchConfig.cmake:22 (message):
+  static library kineto_LIBRARY-NOTFOUND not found.
+Call Stack (most recent call first):
+  /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Torch/TorchConfig.cmake:125 (append_torchlib_if_found)
+  CMakeLists.txt:80 (find_package)
+
+
+-- HIP supported arches: gfx906;gfx908;gfx90a;gfx942;gfx950;gfx1030;gfx1100;gfx1101;gfx1200;gfx1201
+-- FetchContent base directory: /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/.deps
+-- Enabling C extension.
+-- Enabling moe extension.
+-- Configuring done (12.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312
+[1/33] Running hipify on _moe_C extension source files.
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/cuda_compat.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/hip_compat.h [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/dispatch_utils.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/dispatch_utils.h [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/moe/moe_align_sum_kernels.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/moe/moe_align_sum_kernels.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/moe/topk_softmax_kernels.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/moe/topk_softmax_kernels.hip [skipped, already hipified]
+Successfully preprocessed all matching files.
+Total number of unsupported CUDA function calls: 0
+
+
+Total number of replaced kernel launches: 9
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/moe/moe_align_sum_kernels.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/moe/topk_softmax_kernels.hip
+[2/30] Running hipify on _rocm_C extension source files.
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/rocm/skinny_gemms.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/rocm/skinny_gemms.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/attention_generic.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/attention_generic.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_fp8.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_fp8.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_float32.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_float32.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_float16.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_float16.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_bfloat16.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_bfloat16_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/attention_dtypes.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/attention_dtypes_hip.h [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fp8/amd/quant_utils.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fp8/amd/quant_utils_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/rocm/attention.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/rocm/attention.hip [skipped, already hipified]
+Successfully preprocessed all matching files.
+Total number of unsupported CUDA function calls: 0
+
+
+Total number of replaced kernel launches: 13
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/rocm/skinny_gemms.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/rocm/attention.hip
+[3/27] Running hipify on _C extension source files.
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/mamba_ssm/selective_scan.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/mamba_ssm/selective_scan_hip.h [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/mamba_ssm/static_switch.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/mamba_ssm/static_switch.h [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/mamba_ssm/selective_scan_fwd.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/mamba_ssm/selective_scan_fwd.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/causal_conv1d/causal_conv1d.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/causal_conv1d/causal_conv1d_hip.h [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/causal_conv1d/static_switch.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/causal_conv1d/static_switch.h [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/causal_conv1d/causal_conv1d.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/causal_conv1d/causal_conv1d.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/cuda_utils.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/hip_utils.h [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/cuda_compat.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/hip_compat.h [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/dispatch_utils.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/dispatch_utils.h [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/attention_generic.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/attention_generic.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_float32.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_float32.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_float16.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_float16.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_bfloat16.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_bfloat16_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_fp8.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/dtype_fp8.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/attention_dtypes.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/attention_dtypes_hip.h [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fp8/amd/quant_utils.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fp8/amd/quant_utils_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fp8/nvidia/quant_utils.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fp8/nvidia/quant_utils_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/cache_kernels.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/cache_kernels.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/attention_utils.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/attention_utils_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/attention_kernels.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/attention_kernels_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/paged_attention_v1.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/paged_attention_v1.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/paged_attention_v2.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/paged_attention_v2.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/merge_attn_states.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/merge_attn_states.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/vertical_slash_index.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/vertical_slash_index.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/pos_encoding_kernels.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/pos_encoding_kernels.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/activation_kernels.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/activation_kernels.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/type_convert.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/type_convert_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/layernorm_kernels.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/layernorm_kernels.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fp8/common.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fp8/common_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/layernorm_quant_kernels.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/layernorm_quant_kernels.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/sampler.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/sampler.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/cuda_view.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/hip_view.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/compat.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/compat.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/qdq_util.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/qdq_util.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/matrix_view.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/matrix_view_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/qdq_2.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/qdq_2.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/qdq_3.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/qdq_3.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/qdq_4.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/qdq_4.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/qdq_8.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/qdq_8.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/q_gemm.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/q_gemm.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/vectorization.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/vectorization.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/vectorization_utils.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/vectorization_utils.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/compressed_tensors/int8_quant_kernels.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/compressed_tensors/int8_quant_kernels.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fp8/common.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fp8/common.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fused_kernels/quant_conversions.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fused_kernels/quant_conversions.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fused_kernels/layernorm_utils.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fused_kernels/layernorm_utils_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fused_kernels/fused_layernorm_dynamic_per_token_quant.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fused_kernels/fused_layernorm_dynamic_per_token_quant.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/ggml-common.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/ggml-common_hip.h [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/vecdotq.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/vecdotq_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/dequantize.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/dequantize_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/mmvq.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/mmvq_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/mmq.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/mmq_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/moe.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/moe_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/moe_vec.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/moe_vec_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/gguf_kernel.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/gguf_kernel.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/activation_kernels.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/activation_kernels.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/cuda_utils_kernels.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/hip_utils_kernels.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/prepare_inputs/advance_step.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/prepare_inputs/advance_step_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/prepare_inputs/advance_step.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/prepare_inputs/advance_step.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/custom_all_reduce.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/custom_all_reduce_hip.cuh [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/custom_all_reduce.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/custom_all_reduce.hip [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quickreduce/base.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quickreduce/base.h [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quickreduce/quick_reduce_impl.cuh -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quickreduce/quick_reduce_impl.cuh [skipped, no changes]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quickreduce/quick_reduce.h -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quickreduce/quick_reduce_hip.h [skipped, already hipified]
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/custom_quickreduce.cu -> /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/custom_quickreduce.hip [skipped, already hipified]
+Successfully preprocessed all matching files.
+Total number of unsupported CUDA function calls: 0
+
+
+Total number of replaced kernel launches: 144
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/mamba_ssm/selective_scan_fwd.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/mamba/causal_conv1d/causal_conv1d.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/cache_kernels.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/paged_attention_v1.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/paged_attention_v2.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/merge_attn_states.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/attention/vertical_slash_index.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/pos_encoding_kernels.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/activation_kernels.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/layernorm_kernels.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/layernorm_quant_kernels.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/sampler.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/hip_view.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gptq/q_gemm.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/compressed_tensors/int8_quant_kernels.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fp8/common.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/fused_kernels/fused_layernorm_dynamic_per_token_quant.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/gguf/gguf_kernel.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/quantization/activation_kernels.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/hip_utils_kernels.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/prepare_inputs/advance_step.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/custom_all_reduce.hip
+/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/temp.linux-x86_64-cpython-312/csrc/custom_quickreduce.hip
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/lib.linux-x86_64-cpython-312/vllm/_moe_C.abi3.so
+-- Set non-toolchain portion of runtime path of "/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/lib.linux-x86_64-cpython-312/vllm/_moe_C.abi3.so" to ""
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/lib.linux-x86_64-cpython-312/vllm/_rocm_C.abi3.so
+-- Set non-toolchain portion of runtime path of "/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/lib.linux-x86_64-cpython-312/vllm/_rocm_C.abi3.so" to ""
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/lib.linux-x86_64-cpython-312/vllm/_C.abi3.so
+-- Set non-toolchain portion of runtime path of "/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm/build/lib.linux-x86_64-cpython-312/vllm/_C.abi3.so" to ""
+Creating /usr/local/lib/python3.12/dist-packages/vllm.egg-link (link to .)
+Removing vllm 0.6.1.dev3865+g8ef30c4d0.rocm631 from easy-install.pth file
+vllm 0.9.2rc2.dev106+gb0955f826.d20250711.rocm631 is already the active version in easy-install.pth
+detected new path '/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/rocm_vllm'
+Installing vllm script to /usr/local/bin
+
+Installed /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/vllm
+Processing dependencies for vllm==0.9.2rc2.dev106+gb0955f826.d20250711.rocm631
+Searching for numba==0.61.2
+Best match: numba 0.61.2
+Adding numba 0.61.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for setuptools==79.0.1
+Best match: setuptools 79.0.1
+Adding setuptools 79.0.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for six==1.17.0
+Best match: six 1.17.0
+Adding six 1.17.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for llguidance==0.7.30
+Best match: llguidance 0.7.30
+Adding llguidance 0.7.30 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for xgrammar==0.1.19
+Best match: xgrammar 0.1.19
+Adding xgrammar 0.1.19 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for runai-model-streamer-s3==0.11.0
+Best match: runai-model-streamer-s3 0.11.0
+Adding runai-model-streamer-s3 0.11.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for runai-model-streamer==0.11.0
+Best match: runai-model-streamer 0.11.0
+Adding runai-model-streamer 0.11.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for setuptools-scm==8.3.1
+Best match: setuptools-scm 8.3.1
+Adding setuptools-scm 8.3.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for packaging==24.2
+Best match: packaging 24.2
+Adding packaging 24.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages/setuptools/_vendor
+Searching for tensorizer==2.10.1
+Best match: tensorizer 2.10.1
+Adding tensorizer 2.10.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for pytest-asyncio==0.25.3
+Best match: pytest-asyncio 0.25.3
+Adding pytest-asyncio 0.25.3 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for peft==0.14.0
+Best match: peft 0.14.0
+Adding peft 0.14.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for ray==2.41.0
+Best match: ray 2.41.0
+Adding ray 2.41.0 to easy-install.pth file
+Installing ray script to /usr/local/bin
+Installing rllib script to /usr/local/bin
+Installing serve script to /usr/local/bin
+Installing tune script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for datasets==3.2.0
+Best match: datasets 3.2.0
+Adding datasets 3.2.0 to easy-install.pth file
+Installing datasets-cli script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for botocore==1.36.12
+Best match: botocore 1.36.12
+Adding botocore 1.36.12 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for boto3==1.36.12
+Best match: boto3 1.36.12
+Adding boto3 1.36.12 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for pybase64==1.4.1
+Best match: pybase64 1.4.1
+Adding pybase64 1.4.1 to easy-install.pth file
+Installing pybase64 script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for ninja==1.11.1.3
+Best match: ninja 1.11.1.3
+Adding ninja 1.11.1.3 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for scipy==1.16.0
+Best match: scipy 1.16.0
+Adding scipy 1.16.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for python-json-logger==3.3.0
+Best match: python-json-logger 3.3.0
+Adding python-json-logger 3.3.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for watchfiles==1.0.4
+Best match: watchfiles 1.0.4
+Adding watchfiles 1.0.4 to easy-install.pth file
+Installing watchfiles script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for cloudpickle==3.1.1
+Best match: cloudpickle 3.1.1
+Adding cloudpickle 3.1.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for depyf==0.18.0
+Best match: depyf 0.18.0
+Adding depyf 0.18.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for compressed-tensors==0.10.2
+Best match: compressed-tensors 0.10.2
+Adding compressed-tensors 0.10.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for einops==0.8.0
+Best match: einops 0.8.0
+Adding einops 0.8.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for PyYAML==6.0.2
+Best match: PyYAML 6.0.2
+Adding PyYAML 6.0.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for opencv-python-headless==4.11.0.86
+Best match: opencv-python-headless 4.11.0.86
+Adding opencv-python-headless 4.11.0.86 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for mistral-common==1.7.0
+Best match: mistral-common 1.7.0
+Adding mistral-common 1.7.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for gguf==0.17.1
+Best match: gguf 0.17.1
+Adding gguf 0.17.1 to easy-install.pth file
+Installing gguf-convert-endian script to /usr/local/bin
+Installing gguf-dump script to /usr/local/bin
+Installing gguf-editor-gui script to /usr/local/bin
+Installing gguf-new-metadata script to /usr/local/bin
+Installing gguf-set-metadata script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for msgspec==0.19.0
+Best match: msgspec 0.19.0
+Adding msgspec 0.19.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for pyzmq==26.2.1
+Best match: pyzmq 26.2.1
+Adding pyzmq 26.2.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for partial-json-parser==0.2.1.1.post5
+Best match: partial-json-parser 0.2.1.1.post5
+Adding partial-json-parser 0.2.1.1.post5 to easy-install.pth file
+Installing json-playground script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for filelock==3.17.0
+Best match: filelock 3.17.0
+Adding filelock 3.17.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for typing-extensions==4.12.2
+Best match: typing-extensions 4.12.2
+typing-extensions 4.12.2 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python3.12/dist-packages/setuptools/_vendor
+Searching for lark==1.2.2
+Best match: lark 1.2.2
+Adding lark 1.2.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for outlines==0.1.11
+Best match: outlines 0.1.11
+Adding outlines 0.1.11 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for lm-format-enforcer==0.10.11
+Best match: lm-format-enforcer 0.10.11
+Adding lm-format-enforcer 0.10.11 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for tiktoken==0.7.0
+Best match: tiktoken 0.7.0
+Adding tiktoken 0.7.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for prometheus-fastapi-instrumentator==7.0.2
+Best match: prometheus-fastapi-instrumentator 7.0.2
+Adding prometheus-fastapi-instrumentator 7.0.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for pillow==10.4.0
+Best match: pillow 10.4.0
+Adding pillow 10.4.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for prometheus-client==0.21.1
+Best match: prometheus-client 0.21.1
+Adding prometheus-client 0.21.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for pydantic==2.10.6
+Best match: pydantic 2.10.6
+Adding pydantic 2.10.6 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for openai==1.90.0
+Best match: openai 1.90.0
+Adding openai 1.90.0 to easy-install.pth file
+Installing openai script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for aiohttp==3.11.11
+Best match: aiohttp 3.11.11
+Adding aiohttp 3.11.11 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for fastapi==0.115.8
+Best match: fastapi 0.115.8
+Adding fastapi 0.115.8 to easy-install.pth file
+Installing fastapi script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for protobuf==5.29.3
+Best match: protobuf 5.29.3
+Adding protobuf 5.29.3 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for tokenizers==0.21.2
+Best match: tokenizers 0.21.2
+Adding tokenizers 0.21.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for huggingface-hub==0.33.3
+Best match: huggingface-hub 0.33.3
+Adding huggingface-hub 0.33.3 to easy-install.pth file
+Installing huggingface-cli script to /usr/local/bin
+Installing tiny-agents script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for transformers==4.53.1
+Best match: transformers 4.53.1
+Adding transformers 4.53.1 to easy-install.pth file
+Installing transformers script to /usr/local/bin
+Installing transformers-cli script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for py-cpuinfo==9.0.0
+Best match: py-cpuinfo 9.0.0
+Adding py-cpuinfo 9.0.0 to easy-install.pth file
+Installing cpuinfo script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for blake3==1.0.4
+Best match: blake3 1.0.4
+Adding blake3 1.0.4 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for tqdm==4.67.1
+Best match: tqdm 4.67.1
+Adding tqdm 4.67.1 to easy-install.pth file
+Installing tqdm script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for requests==2.32.3
+Best match: requests 2.32.3
+Adding requests 2.32.3 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for numpy==1.26.4
+Best match: numpy 1.26.4
+Adding numpy 1.26.4 to easy-install.pth file
+Installing f2py script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for sentencepiece==0.2.0
+Best match: sentencepiece 0.2.0
+Adding sentencepiece 0.2.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for psutil==6.1.1
+Best match: psutil 6.1.1
+Adding psutil 6.1.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for cachetools==6.1.0
+Best match: cachetools 6.1.0
+Adding cachetools 6.1.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for regex==2024.11.6
+Best match: regex 2024.11.6
+Adding regex 2024.11.6 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for llvmlite==0.44.0
+Best match: llvmlite 0.44.0
+Adding llvmlite 0.44.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for triton==3.2.0+gite5be006a
+Best match: triton 3.2.0+gite5be006a
+Adding triton 3.2.0+gite5be006a to easy-install.pth file
+Installing proton script to /usr/local/bin
+Installing proton-viewer script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for torch==2.7.0a0+git3a58512
+Best match: torch 2.7.0a0+git3a58512
+Adding torch 2.7.0a0+git3a58512 to easy-install.pth file
+Installing torchfrtrace script to /usr/local/bin
+Installing torchrun script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for humanize==4.12.3
+Best match: humanize 4.12.3
+Adding humanize 4.12.3 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for libnacl==2.1.0
+Best match: libnacl 2.1.0
+Adding libnacl 2.1.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for hiredis==3.1.0
+Best match: hiredis 3.1.0
+Adding hiredis 3.1.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for redis==5.2.1
+Best match: redis 5.2.1
+Adding redis 5.2.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for pytest==8.3.4
+Best match: pytest 8.3.4
+Adding pytest 8.3.4 to easy-install.pth file
+Installing py.test script to /usr/local/bin
+Installing pytest script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for safetensors==0.5.2
+Best match: safetensors 0.5.2
+Adding safetensors 0.5.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for accelerate==1.3.0
+Best match: accelerate 1.3.0
+Adding accelerate 1.3.0 to easy-install.pth file
+Installing accelerate script to /usr/local/bin
+Installing accelerate-config script to /usr/local/bin
+Installing accelerate-estimate-memory script to /usr/local/bin
+Installing accelerate-launch script to /usr/local/bin
+Installing accelerate-merge-weights script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for frozenlist==1.5.0
+Best match: frozenlist 1.5.0
+Adding frozenlist 1.5.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for aiosignal==1.3.2
+Best match: aiosignal 1.3.2
+Adding aiosignal 1.3.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for msgpack==1.1.0
+Best match: msgpack 1.1.0
+Adding msgpack 1.1.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for jsonschema==4.23.0
+Best match: jsonschema 4.23.0
+Adding jsonschema 4.23.0 to easy-install.pth file
+Installing jsonschema script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for click==8.1.8
+Best match: click 8.1.8
+Adding click 8.1.8 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for fsspec==2024.9.0
+Best match: fsspec 2024.9.0
+Adding fsspec 2024.9.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for multiprocess==0.70.16
+Best match: multiprocess 0.70.16
+Adding multiprocess 0.70.16 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for xxhash==3.5.0
+Best match: xxhash 3.5.0
+Adding xxhash 3.5.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for pandas==2.2.3
+Best match: pandas 2.2.3
+Adding pandas 2.2.3 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for dill==0.3.8
+Best match: dill 0.3.8
+Adding dill 0.3.8 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for pyarrow==19.0.0
+Best match: pyarrow 19.0.0
+Adding pyarrow 19.0.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for urllib3==2.3.0
+Best match: urllib3 2.3.0
+Adding urllib3 2.3.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for python-dateutil==2.9.0.post0
+Best match: python-dateutil 2.9.0.post0
+Adding python-dateutil 2.9.0.post0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for jmespath==1.0.1
+Best match: jmespath 1.0.1
+Adding jmespath 1.0.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for s3transfer==0.11.2
+Best match: s3transfer 0.11.2
+Adding s3transfer 0.11.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for anyio==4.8.0
+Best match: anyio 4.8.0
+Adding anyio 4.8.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for astor==0.8.1
+Best match: astor 0.8.1
+Adding astor 0.8.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for outlines-core==0.1.26
+Best match: outlines-core 0.1.26
+Adding outlines-core 0.1.26 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for airportsdata==20241001
+Best match: airportsdata 20241001
+Adding airportsdata 20241001 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for pycountry==24.6.1
+Best match: pycountry 24.6.1
+Adding pycountry 24.6.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for referencing==0.36.2
+Best match: referencing 0.36.2
+Adding referencing 0.36.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for diskcache==5.6.3
+Best match: diskcache 5.6.3
+Adding diskcache 5.6.3 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for nest-asyncio==1.6.0
+Best match: nest-asyncio 1.6.0
+Adding nest-asyncio 1.6.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for jinja2==3.1.5
+Best match: jinja2 3.1.5
+Adding jinja2 3.1.5 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for interegular==0.3.3
+Best match: interegular 0.3.3
+Adding interegular 0.3.3 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for starlette==0.45.3
+Best match: starlette 0.45.3
+Adding starlette 0.45.3 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for pydantic-core==2.27.2
+Best match: pydantic-core 2.27.2
+Adding pydantic-core 2.27.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for annotated-types==0.7.0
+Best match: annotated-types 0.7.0
+Adding annotated-types 0.7.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for sniffio==1.3.1
+Best match: sniffio 1.3.1
+Adding sniffio 1.3.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for jiter==0.8.2
+Best match: jiter 0.8.2
+Adding jiter 0.8.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for httpx==0.28.1
+Best match: httpx 0.28.1
+Adding httpx 0.28.1 to easy-install.pth file
+Installing httpx script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for distro==1.7.0
+Best match: distro 1.7.0
+Adding distro 1.7.0 to easy-install.pth file
+Installing distro script to /usr/local/bin
+
+Using /usr/lib/python3/dist-packages
+Searching for yarl==1.18.3
+Best match: yarl 1.18.3
+Adding yarl 1.18.3 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for propcache==0.2.1
+Best match: propcache 0.2.1
+Adding propcache 0.2.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for multidict==6.1.0
+Best match: multidict 6.1.0
+Adding multidict 6.1.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for attrs==25.1.0
+Best match: attrs 25.1.0
+Adding attrs 25.1.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for aiohappyeyeballs==2.4.4
+Best match: aiohappyeyeballs 2.4.4
+Adding aiohappyeyeballs 2.4.4 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for uvicorn==0.34.0
+Best match: uvicorn 0.34.0
+Adding uvicorn 0.34.0 to easy-install.pth file
+Installing uvicorn script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for email-validator==2.2.0
+Best match: email-validator 2.2.0
+Adding email-validator 2.2.0 to easy-install.pth file
+Installing email_validator script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for python-multipart==0.0.20
+Best match: python-multipart 0.0.20
+Adding python-multipart 0.0.20 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for fastapi-cli==0.0.8
+Best match: fastapi-cli 0.0.8
+Adding fastapi-cli 0.0.8 to easy-install.pth file
+Installing fastapi script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for hf-xet==1.1.5
+Best match: hf-xet 1.1.5
+Adding hf-xet 1.1.5 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for certifi==2025.1.31
+Best match: certifi 2025.1.31
+Adding certifi 2025.1.31 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for idna==3.10
+Best match: idna 3.10
+Adding idna 3.10 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for charset-normalizer==3.4.1
+Best match: charset-normalizer 3.4.1
+Adding charset-normalizer 3.4.1 to easy-install.pth file
+Installing normalizer script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for networkx==3.4.2
+Best match: networkx 3.4.2
+Adding networkx 3.4.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for sympy==1.13.1
+Best match: sympy 1.13.1
+Adding sympy 1.13.1 to easy-install.pth file
+Installing isympy script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for pluggy==1.5.0
+Best match: pluggy 1.5.0
+Adding pluggy 1.5.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for iniconfig==2.0.0
+Best match: iniconfig 2.0.0
+Adding iniconfig 2.0.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for rpds-py==0.22.3
+Best match: rpds-py 0.22.3
+Adding rpds-py 0.22.3 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for jsonschema-specifications==2024.10.1
+Best match: jsonschema-specifications 2024.10.1
+Adding jsonschema-specifications 2024.10.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for tzdata==2025.1
+Best match: tzdata 2025.1
+Adding tzdata 2025.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for pytz==2025.1
+Best match: pytz 2025.1
+Adding pytz 2025.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for MarkupSafe==3.0.2
+Best match: MarkupSafe 3.0.2
+Adding MarkupSafe 3.0.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for httpcore==1.0.7
+Best match: httpcore 1.0.7
+Adding httpcore 1.0.7 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for websockets==14.2
+Best match: websockets 14.2
+Adding websockets 14.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for uvloop==0.21.0
+Best match: uvloop 0.21.0
+Adding uvloop 0.21.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for python-dotenv==1.0.1
+Best match: python-dotenv 1.0.1
+Adding python-dotenv 1.0.1 to easy-install.pth file
+Installing dotenv script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for httptools==0.6.4
+Best match: httptools 0.6.4
+Adding httptools 0.6.4 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for h11==0.14.0
+Best match: h11 0.14.0
+Adding h11 0.14.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for dnspython==2.7.0
+Best match: dnspython 2.7.0
+Adding dnspython 2.7.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for fastapi-cloud-cli==0.1.2
+Best match: fastapi-cloud-cli 0.1.2
+Adding fastapi-cloud-cli 0.1.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for rich-toolkit==0.14.8
+Best match: rich-toolkit 0.14.8
+Adding rich-toolkit 0.14.8 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for typer==0.16.0
+Best match: typer 0.16.0
+Adding typer 0.16.0 to easy-install.pth file
+Installing typer script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for mpmath==1.3.0
+Best match: mpmath 1.3.0
+Adding mpmath 1.3.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for sentry-sdk==2.32.0
+Best match: sentry-sdk 2.32.0
+Adding sentry-sdk 2.32.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for rignore==0.5.1
+Best match: rignore 0.5.1
+Adding rignore 0.5.1 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for rich==14.0.0
+Best match: rich 14.0.0
+Adding rich 14.0.0 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for shellingham==1.5.4
+Best match: shellingham 1.5.4
+Adding shellingham 1.5.4 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for pygments==2.19.2
+Best match: pygments 2.19.2
+Adding pygments 2.19.2 to easy-install.pth file
+Installing pygmentize script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for markdown-it-py==3.0.0
+Best match: markdown-it-py 3.0.0
+Adding markdown-it-py 3.0.0 to easy-install.pth file
+Installing markdown-it script to /usr/local/bin
+
+Using /usr/local/lib/python3.12/dist-packages
+Searching for mdurl==0.1.2
+Best match: mdurl 0.1.2
+Adding mdurl 0.1.2 to easy-install.pth file
+
+Using /usr/local/lib/python3.12/dist-packages
+Finished processing dependencies for vllm==0.9.2rc2.dev106+gb0955f826.d20250711.rocm631

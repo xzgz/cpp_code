@@ -4,19 +4,19 @@ from openai import OpenAI
 from rich.console import Console
 from rich.markdown import Markdown
 from markdown import markdown
-from weasyprint import HTML
+# from weasyprint import HTML
 import re
 
 
-# model_name = "DeepSeek-R1-0528"
-model_name = "/mnt/raid0/heyanguang/code/models/Llama-3.1-8B-Instruct-FP8-KV"
-# client = OpenAI(api_key=model_name, base_url="http://10.67.76.70:30000/v1")
-client = OpenAI(api_key=model_name, base_url="http://10.67.77.128:30000/v1")
+model_name = "DeepSeek-R1-0528"
+# model_name = "/mnt/raid0/heyanguang/code/models/Llama-3.1-8B-Instruct-FP8-KV"
+client = OpenAI(api_key=model_name, base_url="http://10.67.76.70:30000/v1")
+# client = OpenAI(api_key=model_name, base_url="http://10.67.77.128:30000/v1")
 temperature = 0.5
 # temperature = 0.6
 # temperature = 1.0
 # max_output_tokens = 64 * 1024
-max_output_tokens = 16 * 1024
+max_output_tokens = 32 * 1024
 
 
 question1 = """
@@ -480,7 +480,7 @@ def chat_with_deepseek_demo2():
     deal_with_cpp_str = ""
 
     background_file_list = [
-        "/mnt/raid0/heyanguang/code/cpp_code/ds_note_mi300_doc_output/amd-instinct-mi300-cdna3-instruction-set-architecture/total_answer_content.md",
+        "/mnt/raid0/heyanguang/code/question_background",
     ]
     deal_with_csv_file_list = [
         # "/mnt/raid0/heyanguang/code/aiter/ul8_gm_async_no_branch_v1_debug_wv_splitk_small_fp16_bf16_kernel_v0.csv",
@@ -488,7 +488,6 @@ def chat_with_deepseek_demo2():
         # "/mnt/raid0/heyanguang/code/aiter/ul8_gm_async_no_branch_v3_debug_wv_splitk_small_fp16_bf16_kernel_v0.csv",
     ]
     deal_with_cpp_file_list = [
-        # "/mnt/raid0/heyanguang/code/aiter/log_run/wv_splitk_small_fp16_bf16_kernel.cpp",
         "/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/jit/build/ck/include/ck_tile/ops/fmha/pipeline/tile_fmha_shape_hip.hpp",
         "/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/jit/build/ck/include/ck_tile/ops/fmha/pipeline/tile_fmha_traits_hip.hpp",
         "/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/jit/build/ck/include/ck_tile/ops/fmha/block/variants_hip.hpp",
@@ -498,14 +497,13 @@ def chat_with_deepseek_demo2():
         "/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/jit/build/ck/include/ck_tile/ops/epilogue/default_2d_epilogue_hip.hpp",
         "/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/jit/build/ck/include/ck_tile/ops/fmha/kernel/fmha_batch_prefill_kernel_hip.hpp",
         "/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/jit/build/mha_batch_prefill_bf16_logits_nbias_mask_nlse_ndropout_vllm_chunked/build/srcs/fmha_batch_prefill_d128_bf16_group_b128x128x32x128x32x128_r4x1x1_r4x1x1_w32x32x16_w32x32x16_qr_async_vr_psskddv_logits_nbias_mask_nlse_ndropout_nsquant_vllm_chunked.hip",
+        # "/mnt/raid0/heyanguang/code/aiter/log_run/wv_splitk_small_fp16_bf16_kernel.cpp",
         # "ddddddd",
     ]
     question_prompt_file_list = [
-        # "/mnt/raid0/heyanguang/code/aiter/log_run/question_prompt1",
-        # "/mnt/raid0/heyanguang/code/aiter/log_run/question_prompt2",
-        # "/mnt/raid0/heyanguang/code/aiter/log_run/question_prompt3",
-        "/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/question_prompt1",
-        # "/mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/question_prompt2",
+        "/mnt/raid0/heyanguang/code/question_prompt1",
+        "/mnt/raid0/heyanguang/code/question_background",
+        # "/mnt/raid0/heyanguang/code/question_prompt2",
     ]
     question_prompt_list = []
 
@@ -522,12 +520,9 @@ def chat_with_deepseek_demo2():
     #     deal_with_csv_str += deal_with_rocprofv2_gen_csv(file)
     #     print(deal_with_csv_str)
 
+    # # for file in deal_with_cpp_file_list[::-1]:
     # for file in deal_with_cpp_file_list:
-    # for file in deal_with_cpp_file_list[::-1]:
-    #     print(file)
-    #     # function_start_line = 470
-    #     # note_prefix = "srcs/custom_kernels.hip"
-    #     # deal_with_cpp_str += deal_with_cpp(function_start_line, note_prefix, file)
+    #     # print(file)
     #     with open(file, 'r', encoding='utf-8', errors='ignore') as f:
     #         deal_with_cpp_str += f.read()
 
@@ -538,10 +533,10 @@ def chat_with_deepseek_demo2():
 
     input_prompt_sequence_list = [
         question_prompt_list[0],
-        deal_with_cpp_str,
-        # question_prompt_list[1],
-        # deal_with_csv_str,
+        question_prompt_list[1],
         # question_prompt_list[2],
+        # deal_with_cpp_str,
+        # deal_with_csv_str,
     ]
     input_prompt = ""
     for val in input_prompt_sequence_list:
