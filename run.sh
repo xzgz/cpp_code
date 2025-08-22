@@ -190,4 +190,7 @@ export AITER_LOG_MORE=1 && (pytest ./op_tests/test_batch_prefill.py::test_batch_
 # (python3 -u ./op_tests/test_batch_prefill.py > ./log_run/log2 2>&1 && cat ./log_run/log2 | egrep "paged_kv_cache_v2\[|avg_kt_base|PASSED|dump_dir|_ZN7ck_tile|_vllm_layout") > ./log_run/op_mi308_case_list2_test_shape_v1.txt
 # (python3 -u ./op_tests/test_batch_prefill.py --use_ori_qkv_shape > ./log_run/log2 2>&1 && cat ./log_run/log2 | egrep "paged_kv_cache_v2\[|avg_kt_base|PASSED|dump_dir|_ZN7ck_tile|_vllm_layout") > ./log_run/op_mi308_case_list2_real_shape_v1.txt
 
+# cat thread2coord_map_block3.log | egrep "k_id" | uniq > thr2coord_block3.log
+# cat thread2coord_map_block3.log | egrep "v_id" | uniq >> thr2coord_block3.log
+
 set +x

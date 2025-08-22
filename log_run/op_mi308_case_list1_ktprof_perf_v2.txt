@@ -1,0 +1,289 @@
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-1-128-1024-1024] [aiter WARNING] 2025-08-22 06:00:10.071 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/jit/core.py:583 - check_args
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0          7,664.5        CUDA            8
+[perf] q_shape: torch.Size([1024, 8, 128]) kv_shape: torch.Size([64, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 77.42    us, avg_kt: 77.42    us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-1-128-2048-2048] [aiter INFO] 2025-08-22 06:00:12.220 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         16,777.8        CUDA            8
+[perf] q_shape: torch.Size([2048, 8, 128]) kv_shape: torch.Size([128, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 169.47   us, avg_kt: 169.47   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-1-128-4096-4096] [aiter INFO] 2025-08-22 06:00:12.514 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         45,833.3        CUDA            8
+[perf] q_shape: torch.Size([4096, 8, 128]) kv_shape: torch.Size([256, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 462.96   us, avg_kt: 462.96   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-1-128-8192-8192] [aiter INFO] 2025-08-22 06:00:13.079 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        144,331.1        CUDA            8
+[perf] q_shape: torch.Size([8192, 8, 128]) kv_shape: torch.Size([512, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1457.89  us, avg_kt: 1457.89  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-1-128-1039-1039] [aiter INFO] 2025-08-22 06:00:13.389 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0          8,654.3        CUDA            8
+[perf] q_shape: torch.Size([1039, 8, 128]) kv_shape: torch.Size([65, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 87.42    us, avg_kt: 87.42    us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-1-128-2065-2065] [aiter INFO] 2025-08-22 06:00:13.572 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         19,826.9        CUDA            8
+[perf] q_shape: torch.Size([2065, 8, 128]) kv_shape: torch.Size([130, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 200.27   us, avg_kt: 200.27   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-1-128-4111-4111] [aiter INFO] 2025-08-22 06:00:13.872 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         52,732.6        CUDA            8
+[perf] q_shape: torch.Size([4111, 8, 128]) kv_shape: torch.Size([257, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 532.65   us, avg_kt: 532.65   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-1-128-8209-8209] [aiter INFO] 2025-08-22 06:00:14.461 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        158,549.2        CUDA            8
+[perf] q_shape: torch.Size([8209, 8, 128]) kv_shape: torch.Size([514, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1601.51  us, avg_kt: 1601.51  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-1-128-1039-1041] [aiter INFO] 2025-08-22 06:00:14.784 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0          8,662.3        CUDA            8
+[perf] q_shape: torch.Size([1039, 8, 128]) kv_shape: torch.Size([66, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 87.50    us, avg_kt: 87.50    us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-1-128-2065-2067] [aiter INFO] 2025-08-22 06:00:14.968 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         20,306.7        CUDA            8
+[perf] q_shape: torch.Size([2065, 8, 128]) kv_shape: torch.Size([130, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 205.12   us, avg_kt: 205.12   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-1-128-4111-4113] [aiter INFO] 2025-08-22 06:00:15.271 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         54,625.2        CUDA            8
+[perf] q_shape: torch.Size([4111, 8, 128]) kv_shape: torch.Size([258, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 551.77   us, avg_kt: 551.77   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-1-128-8209-8211] [aiter INFO] 2025-08-22 06:00:15.868 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        162,609.1        CUDA            8
+[perf] q_shape: torch.Size([8209, 8, 128]) kv_shape: torch.Size([514, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1642.52  us, avg_kt: 1642.52  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-2-128-1024-1024] [aiter INFO] 2025-08-22 06:00:16.453 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0          7,798.0        CUDA            8
+[perf] q_shape: torch.Size([1024, 8, 128]) kv_shape: torch.Size([64, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 78.77    us, avg_kt: 78.77    us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-2-128-2048-2048] [aiter INFO] 2025-08-22 06:00:16.641 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         16,775.1        CUDA            8
+[perf] q_shape: torch.Size([2048, 8, 128]) kv_shape: torch.Size([128, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 169.44   us, avg_kt: 169.44   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-2-128-4096-4096] [aiter INFO] 2025-08-22 06:00:16.942 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         45,875.9        CUDA            8
+[perf] q_shape: torch.Size([4096, 8, 128]) kv_shape: torch.Size([256, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 463.39   us, avg_kt: 463.39   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-2-128-8192-8192] [aiter INFO] 2025-08-22 06:00:17.521 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        145,129.9        CUDA            8
+[perf] q_shape: torch.Size([8192, 8, 128]) kv_shape: torch.Size([512, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1465.96  us, avg_kt: 1465.96  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-2-128-1039-1039] [aiter INFO] 2025-08-22 06:00:17.836 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0          8,697.1        CUDA            8
+[perf] q_shape: torch.Size([1039, 8, 128]) kv_shape: torch.Size([65, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 87.85    us, avg_kt: 87.85    us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-2-128-2065-2065] [aiter INFO] 2025-08-22 06:00:18.025 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         19,840.8        CUDA            8
+[perf] q_shape: torch.Size([2065, 8, 128]) kv_shape: torch.Size([130, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 200.41   us, avg_kt: 200.41   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-2-128-4111-4111] [aiter INFO] 2025-08-22 06:00:18.332 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         52,803.4        CUDA            8
+[perf] q_shape: torch.Size([4111, 8, 128]) kv_shape: torch.Size([257, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 533.37   us, avg_kt: 533.37   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-2-128-8209-8209] [aiter INFO] 2025-08-22 06:00:18.937 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        160,092.2        CUDA            8
+[perf] q_shape: torch.Size([8209, 8, 128]) kv_shape: torch.Size([514, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1617.09  us, avg_kt: 1617.09  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-2-128-1039-1041] [aiter INFO] 2025-08-22 06:00:19.270 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0          8,706.8        CUDA            8
+[perf] q_shape: torch.Size([1039, 8, 128]) kv_shape: torch.Size([66, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 87.95    us, avg_kt: 87.95    us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-2-128-2065-2067] [aiter INFO] 2025-08-22 06:00:19.460 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         20,284.7        CUDA            8
+[perf] q_shape: torch.Size([2065, 8, 128]) kv_shape: torch.Size([130, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 204.90   us, avg_kt: 204.90   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-2-128-4111-4113] [aiter INFO] 2025-08-22 06:00:19.774 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         54,634.0        CUDA            8
+[perf] q_shape: torch.Size([4111, 8, 128]) kv_shape: torch.Size([258, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 551.86   us, avg_kt: 551.86   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-2-128-8209-8211] [aiter INFO] 2025-08-22 06:00:20.392 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        163,850.7        CUDA            8
+[perf] q_shape: torch.Size([8209, 8, 128]) kv_shape: torch.Size([514, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1655.06  us, avg_kt: 1655.06  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-32-8-128-1024-1024] [aiter INFO] 2025-08-22 06:00:20.844 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         16,111.2        CUDA            8
+[perf] q_shape: torch.Size([1024, 32, 128]) kv_shape: torch.Size([64, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 162.74   us, avg_kt: 162.74   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-32-8-128-2048-2048] [aiter INFO] 2025-08-22 06:00:21.284 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         44,128.6        CUDA            8
+[perf] q_shape: torch.Size([2048, 32, 128]) kv_shape: torch.Size([128, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 445.74   us, avg_kt: 445.74   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-32-8-128-4096-4096] [aiter INFO] 2025-08-22 06:00:22.155 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        142,331.2        CUDA            8
+[perf] q_shape: torch.Size([4096, 32, 128]) kv_shape: torch.Size([256, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1437.69  us, avg_kt: 1437.69  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-32-8-128-8192-8192] [aiter INFO] 2025-08-22 06:00:24.120 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        508,945.5        CUDA            8
+[perf] q_shape: torch.Size([8192, 32, 128]) kv_shape: torch.Size([512, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 5140.86  us, avg_kt: 5140.86  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-32-8-128-1039-1039] [aiter INFO] 2025-08-22 06:00:25.035 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         18,806.5        CUDA            8
+[perf] q_shape: torch.Size([1039, 32, 128]) kv_shape: torch.Size([65, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 189.96   us, avg_kt: 189.96   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-32-8-128-2065-2065] [aiter INFO] 2025-08-22 06:00:25.494 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         50,099.5        CUDA            8
+[perf] q_shape: torch.Size([2065, 32, 128]) kv_shape: torch.Size([130, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 506.06   us, avg_kt: 506.06   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-32-8-128-4111-4111] [aiter INFO] 2025-08-22 06:00:26.826 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        157,208.7        CUDA            8
+[perf] q_shape: torch.Size([4111, 32, 128]) kv_shape: torch.Size([257, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1587.97  us, avg_kt: 1587.97  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-32-8-128-8209-8209] [aiter INFO] 2025-08-22 06:00:28.841 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        536,263.2        CUDA            8
+[perf] q_shape: torch.Size([8209, 32, 128]) kv_shape: torch.Size([514, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 5416.80  us, avg_kt: 5416.80  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-32-8-128-1039-1041] [aiter INFO] 2025-08-22 06:00:29.781 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         20,432.5        CUDA            8
+[perf] q_shape: torch.Size([1039, 32, 128]) kv_shape: torch.Size([66, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 206.39   us, avg_kt: 206.39   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-32-8-128-2065-2067] [aiter INFO] 2025-08-22 06:00:30.239 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         53,942.1        CUDA            8
+[perf] q_shape: torch.Size([2065, 32, 128]) kv_shape: torch.Size([130, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 544.87   us, avg_kt: 544.87   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-32-8-128-4111-4113] [aiter INFO] 2025-08-22 06:00:31.140 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        165,697.3        CUDA            8
+[perf] q_shape: torch.Size([4111, 32, 128]) kv_shape: torch.Size([258, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1673.71  us, avg_kt: 1673.71  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-32-8-128-8209-8211] [aiter INFO] 2025-08-22 06:00:33.162 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        552,763.5        CUDA            8
+[perf] q_shape: torch.Size([8209, 32, 128]) kv_shape: torch.Size([514, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 5583.47  us, avg_kt: 5583.47  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-1-128-1024-1024] [aiter INFO] 2025-08-22 06:00:34.212 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         16,679.5        CUDA            8
+[perf] q_shape: torch.Size([7168, 8, 128]) kv_shape: torch.Size([448, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 168.48   us, avg_kt: 168.48   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-1-128-2048-2048] [aiter INFO] 2025-08-22 06:00:34.863 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         43,260.2        CUDA            8
+[perf] q_shape: torch.Size([14336, 8, 128]) kv_shape: torch.Size([896, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 436.97   us, avg_kt: 436.97   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-1-128-4096-4096] [aiter INFO] 2025-08-22 06:00:36.074 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         72,364.7        CUDA            8
+[perf] q_shape: torch.Size([28672, 8, 128]) kv_shape: torch.Size([1792, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 730.96   us, avg_kt: 730.96   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-1-128-8192-8192] [aiter INFO] 2025-08-22 06:00:38.768 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        527,264.1        CUDA            8
+[perf] q_shape: torch.Size([57344, 8, 128]) kv_shape: torch.Size([3584, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 5325.90  us, avg_kt: 5325.90  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-1-128-1039-1039] [aiter INFO] 2025-08-22 06:00:39.784 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         17,880.7        CUDA            8
+[perf] q_shape: torch.Size([7273, 8, 128]) kv_shape: torch.Size([455, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 180.61   us, avg_kt: 180.61   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-1-128-2065-2065] [aiter INFO] 2025-08-22 06:00:40.452 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         53,091.2        CUDA            8
+[perf] q_shape: torch.Size([14455, 8, 128]) kv_shape: torch.Size([910, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 536.27   us, avg_kt: 536.27   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-1-128-4111-4111] [aiter INFO] 2025-08-22 06:00:41.741 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        128,604.2        CUDA            8
+[perf] q_shape: torch.Size([28777, 8, 128]) kv_shape: torch.Size([1799, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1299.03  us, avg_kt: 1299.03  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-1-128-8209-8209] [aiter INFO] 2025-08-22 06:00:44.369 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        390,046.4        CUDA            8
+[perf] q_shape: torch.Size([57463, 8, 128]) kv_shape: torch.Size([3598, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 3939.86  us, avg_kt: 3939.86  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-1-128-1039-1041] [aiter INFO] 2025-08-22 06:00:45.209 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         18,662.2        CUDA            8
+[perf] q_shape: torch.Size([7273, 8, 128]) kv_shape: torch.Size([462, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 188.51   us, avg_kt: 188.51   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-1-128-2065-2067] [aiter INFO] 2025-08-22 06:00:45.866 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         47,333.2        CUDA            8
+[perf] q_shape: torch.Size([14455, 8, 128]) kv_shape: torch.Size([910, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 478.11   us, avg_kt: 478.11   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-1-128-4111-4113] [aiter INFO] 2025-08-22 06:00:47.136 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        134,595.7        CUDA            8
+[perf] q_shape: torch.Size([28777, 8, 128]) kv_shape: torch.Size([1806, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1359.55  us, avg_kt: 1359.55  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-1-128-8209-8211] [aiter INFO] 2025-08-22 06:00:49.799 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        443,931.4        CUDA            8
+[perf] q_shape: torch.Size([57463, 8, 128]) kv_shape: torch.Size([3598, 16, 1, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 4484.16  us, avg_kt: 4484.16  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-2-128-1024-1024] [aiter INFO] 2025-08-22 06:00:50.706 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         14,396.2        CUDA            8
+[perf] q_shape: torch.Size([7168, 8, 128]) kv_shape: torch.Size([448, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 145.42   us, avg_kt: 145.42   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-2-128-2048-2048] [aiter INFO] 2025-08-22 06:00:51.812 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         43,810.8        CUDA            8
+[perf] q_shape: torch.Size([14336, 8, 128]) kv_shape: torch.Size([896, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 442.53   us, avg_kt: 442.53   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-2-128-4096-4096] [aiter INFO] 2025-08-22 06:00:53.052 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         78,497.2        CUDA            8
+[perf] q_shape: torch.Size([28672, 8, 128]) kv_shape: torch.Size([1792, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 792.90   us, avg_kt: 792.90   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-2-128-8192-8192] [aiter INFO] 2025-08-22 06:00:55.789 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        503,371.4        CUDA            8
+[perf] q_shape: torch.Size([57344, 8, 128]) kv_shape: torch.Size([3584, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 5084.56  us, avg_kt: 5084.56  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-2-128-1039-1039] [aiter INFO] 2025-08-22 06:00:56.770 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         17,334.5        CUDA            8
+[perf] q_shape: torch.Size([7273, 8, 128]) kv_shape: torch.Size([455, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 175.10   us, avg_kt: 175.10   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-2-128-2065-2065] [aiter INFO] 2025-08-22 06:00:57.456 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         53,675.1        CUDA            8
+[perf] q_shape: torch.Size([14455, 8, 128]) kv_shape: torch.Size([910, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 542.17   us, avg_kt: 542.17   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-2-128-4111-4111] [aiter INFO] 2025-08-22 06:00:58.762 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        133,621.5        CUDA            8
+[perf] q_shape: torch.Size([28777, 8, 128]) kv_shape: torch.Size([1799, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1349.71  us, avg_kt: 1349.71  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-2-128-8209-8209] [aiter INFO] 2025-08-22 06:01:01.468 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        393,575.9        CUDA            8
+[perf] q_shape: torch.Size([57463, 8, 128]) kv_shape: torch.Size([3598, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 3975.51  us, avg_kt: 3975.51  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-2-128-1039-1041] [aiter INFO] 2025-08-22 06:01:02.308 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         18,023.5        CUDA            8
+[perf] q_shape: torch.Size([7273, 8, 128]) kv_shape: torch.Size([462, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 182.06   us, avg_kt: 182.06   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-2-128-2065-2067] [aiter INFO] 2025-08-22 06:01:02.974 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         50,296.3        CUDA            8
+[perf] q_shape: torch.Size([14455, 8, 128]) kv_shape: torch.Size([910, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 508.04   us, avg_kt: 508.04   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-2-128-4111-4113] [aiter INFO] 2025-08-22 06:01:04.283 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        136,907.0        CUDA            8
+[perf] q_shape: torch.Size([28777, 8, 128]) kv_shape: torch.Size([1806, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1382.90  us, avg_kt: 1382.90  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-8-2-128-8209-8211] [aiter INFO] 2025-08-22 06:01:07.074 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        467,128.8        CUDA            8
+[perf] q_shape: torch.Size([57463, 8, 128]) kv_shape: torch.Size([3598, 16, 2, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 4718.47  us, avg_kt: 4718.47  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-32-8-128-1024-1024] [aiter INFO] 2025-08-22 06:01:08.786 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         49,391.7        CUDA            8
+[perf] q_shape: torch.Size([7168, 32, 128]) kv_shape: torch.Size([448, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 498.91   us, avg_kt: 498.91   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-32-8-128-2048-2048] [aiter INFO] 2025-08-22 06:01:11.137 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        156,037.0        CUDA            8
+[perf] q_shape: torch.Size([14336, 32, 128]) kv_shape: torch.Size([896, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 1576.13  us, avg_kt: 1576.13  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-32-8-128-4096-4096] [aiter INFO] 2025-08-22 06:01:15.839 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        312,966.5        CUDA            8
+[perf] q_shape: torch.Size([28672, 32, 128]) kv_shape: torch.Size([1792, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 3161.28  us, avg_kt: 3161.28  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-32-8-128-8192-8192] [aiter INFO] 2025-08-22 06:01:25.589 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0      1,054,657.9        CUDA            8
+[perf] q_shape: torch.Size([57344, 32, 128]) kv_shape: torch.Size([3584, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 10653.11 us, avg_kt: 10653.11 us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-32-8-128-1039-1039] [aiter INFO] 2025-08-22 06:01:28.042 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         71,055.0        CUDA            8
+[perf] q_shape: torch.Size([7273, 32, 128]) kv_shape: torch.Size([455, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 717.73   us, avg_kt: 717.73   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-32-8-128-2065-2065] [aiter INFO] 2025-08-22 06:01:30.386 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         91,693.1        CUDA            8
+[perf] q_shape: torch.Size([14455, 32, 128]) kv_shape: torch.Size([910, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 926.19   us, avg_kt: 926.19   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-32-8-128-4111-4111] [aiter INFO] 2025-08-22 06:01:34.970 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        251,531.9        CUDA            8
+[perf] q_shape: torch.Size([28777, 32, 128]) kv_shape: torch.Size([1799, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 2540.73  us, avg_kt: 2540.73  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-32-8-128-8209-8209] [aiter INFO] 2025-08-22 06:01:45.054 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0      1,435,333.2        CUDA            8
+[perf] q_shape: torch.Size([57463, 32, 128]) kv_shape: torch.Size([3598, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 14498.32 us, avg_kt: 14498.32 us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-32-8-128-1039-1041] [aiter INFO] 2025-08-22 06:01:48.386 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         79,310.2        CUDA            8
+[perf] q_shape: torch.Size([7273, 32, 128]) kv_shape: torch.Size([462, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 801.11   us, avg_kt: 801.11   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-32-8-128-2065-2067] [aiter INFO] 2025-08-22 06:01:50.725 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0         88,331.7        CUDA            8
+[perf] q_shape: torch.Size([14455, 32, 128]) kv_shape: torch.Size([910, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 892.24   us, avg_kt: 892.24   us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-32-8-128-4111-4113] [aiter INFO] 2025-08-22 06:01:55.427 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0        374,482.8        CUDA            8
+[perf] q_shape: torch.Size([28777, 32, 128]) kv_shape: torch.Size([1806, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 3782.65  us, avg_kt: 3782.65  us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-7-32-8-128-8209-8211] [aiter INFO] 2025-08-22 06:02:05.787 - MainProcess:3398 - /mnt/raid0/heyanguang/code/vllm_fa_batch_prefill/aiter/aiter/test_common.py:57 - wrapper
+0              _ZN7ck_tile6kentryILi256ELi2ENS_38FmhaBatchPrefillWithPagedKVCacheKernelINS_40BlockFmh... 99.0            0.0      1,561,954.8        CUDA            8
+[perf] q_shape: torch.Size([57463, 32, 128]) kv_shape: torch.Size([3598, 16, 8, 128]) q_dtype: torch.float16 kv_dtype: torch.float16, avg_kt_base: 15777.32 us, avg_kt: 15777.32 us, uplift: 0.0% 
+PASSED
+op_tests/test_batch_prefill.py::test_batch_prefill_with_paged_kv_cache_v2[19378--5-5--10-10-dtype0-True-0.0-NHD-True-True-16-False-False-1-8-1-128-1024-1024]
